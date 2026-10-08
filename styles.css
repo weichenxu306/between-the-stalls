@@ -1,4 +1,4 @@
-@import url('archive.css');
+@import url('archive.css?v=20261008-paper');
 @font-face{font-family:'Space Grotesk';src:url('assets/fonts/space-grotesk-latin-variable.woff2') format('woff2');font-style:normal;font-weight:400 700;font-display:swap}
 @font-face{font-family:'Market CJK';src:url('assets/fonts/noto-sans-sc-subset-variable.woff2') format('woff2');font-style:normal;font-weight:400 700;font-display:swap}
 :root{color-scheme:light;--night:#141c19;--cream:#eeeee4;--lime:#daeb9c;--paper:#eeeee4;--surface:#f8f8f1;--surface-soft:#e3e5d9;--ink:#1c2821;--muted:#626b61;--line:#cdd1c4;--accent:#445b2e;--accent-soft:#dce5c6;--font:'Space Grotesk','Market CJK','PingFang SC','Microsoft YaHei',sans-serif;--gutter:clamp(24px,5vw,88px);--content:1440px}
