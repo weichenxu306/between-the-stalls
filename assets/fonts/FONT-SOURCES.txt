@@ -1,0 +1,12 @@
+Space Grotesk Latin variable, weight 400-700
+Source: https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2
+Official source project: https://github.com/google/fonts/tree/main/ofl/spacegrotesk
+License: Space-Grotesk-LICENSE.txt (SIL Open Font License 1.1)
+
+Noto Sans SC variable subset, weight 400-700
+Source: https://github.com/google/fonts/tree/main/ofl/notosanssc
+Original font: NotoSansSC[wght].ttf
+License: Noto-Sans-SC-LICENSE.txt (SIL Open Font License 1.1)
+Subset locally with fontTools: 578 Chinese characters and punctuation from the existing website plus storyboard headlines. No website text was uploaded to a font service.
+Subset coverage: noto-sans-sc-subset-characters.txt
+Font size: 144696 bytes
