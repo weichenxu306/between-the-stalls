@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-08",
+  "description": {
+    "zh": "从原始问卷工作簿逐题重算的聚合分布，不包含个人答卷。",
+    "en": "Item-level aggregates recomputed from the original response workbooks; no individual responses are included."
+  },
+  "scale": {
+    "type": "five_point_likert",
+    "valid_scores": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "endpoints": {
+      "1": {
+        "zh": "非常不同意",
+        "en": "Strongly disagree"
+      },
+      "5": {
+        "zh": "非常同意",
+        "en": "Strongly agree"
+      }
+    },
+    "agreement_scores": [
+      4,
+      5
+    ],
+    "agreement_label": {
+      "zh": "选择4或5的比例",
+      "en": "Share selecting 4 or 5"
+    },
+    "source_documents": [
+      {
+        "file": "论文 - 副本.docx",
+        "source_xml_paragraph": 56
+      },
+      {
+        "file": "数据采集与分析/生产数据/Results and discussion-生产者-CN.docx",
+        "source_xml_paragraph": 41
+      }
+    ]
+  },
+  "methodology": {
+    "unit": "single_question_response",
+    "weighting": "unweighted",
+    "aggregation": "Each item is summarized separately. No dimension index is created and no reverse coding is applied.",
+    "validity_rule": "Accept only finite integer numeric values from 1 to 5. Blank values and other codes are excluded separately for each item; do not delete whole respondents from all questions.",
+    "agreement_formula": "(count_4 + count_5) / valid_n",
+    "mean_formula": "sum(score * count_score) / valid_n",
+    "display_precision": {
+      "mean_decimals": 2,
+      "agreement_percent_decimals": 1
+    },
+    "count_validation": "Each 1–5 distribution sums to valid_n; valid_n + missing_n + invalid_n equals sample_n.",
+    "source_privacy": "Only aggregate counts and statistics are included; no response rows, respondent identifiers or demographics are exported."
+  },
+  "groups": [
+    {
+      "id": "consumer",
+      "label": {
+        "zh": "消费者",
+        "en": "Consumers"
+      },
+      "sample_n": 90,
+      "source": {
+        "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+        "sheet": "Sheet1",
+        "response_range": "A2:O91",
+        "notes_column_not_exported": "P"
+      },
+      "items": [
+        {
+          "id": "consumer_a1",
+          "code": "A1",
+          "theme": "price",
+          "label": {
+            "zh": "五金比商超便宜1–5元时选摊贩",
+            "en": "Prefer vendor hardware at ¥1–5 less than supermarkets"
+          },
+          "question": {
+            "text_zh": "如果市集摊贩的五金产品价格比商超便宜 1–5 元，我更倾向于选择摊贩而非商超。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "如果市集摊贩的五金产品价格比商超便宜 1–5 元，我更倾向于选择摊贩而非商超。",
+            "source_document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+            "source_xml_paragraph": 74,
+            "source_locator": "量表分析中的题项陈述或题意摘要",
+            "text_en": "If a market vendor’s hardware products are 1–5 yuan cheaper than those in a supermarket, I am more inclined to choose the vendor over the supermarket.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意在题设价差下选择摊贩。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates stronger agreement with choosing the vendor at the price difference specified in the statement."
+          },
+          "source": {
+            "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+            "sheet": "Sheet1",
+            "column": "D",
+            "header": "问题5(A1)",
+            "data_range": "D2:D91"
+          },
+          "sample_n": 90,
+          "valid_n": 90,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 1,
+            "2": 5,
+            "3": 8,
+            "4": 39,
+            "5": 37
+          },
+          "score_sum": 376,
+          "mean": 4.1777777778,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 76,
+          "agree_rate": 0.8444444444,
+          "agree_percent": 84.44444444,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "consumer_a3",
+          "code": "A3",
+          "theme": "price",
+          "label": {
+            "zh": "降价改变购买计划",
+            "en": "Change plans after a price cut"
+          },
+          "question": {
+            "text_zh": "如果某摊位突然降价，我会改变原本的购买计划。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "如果某摊位突然降价，我会改变原本的购买计划。",
+            "source_document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+            "source_xml_paragraph": 80,
+            "source_locator": "量表分析中的题项陈述或题意摘要",
+            "text_en": "If a stall suddenly lowers its prices, I will change my original purchasing plan.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意降价会改变购买计划。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates stronger agreement that a price cut would change the purchasing plan."
+          },
+          "source": {
+            "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+            "sheet": "Sheet1",
+            "column": "L",
+            "header": "问题13(A3)",
+            "data_range": "L2:L91"
+          },
+          "sample_n": 90,
+          "valid_n": 88,
+          "missing_n": 0,
+          "invalid_n": 2,
+          "excluded_invalid_value_counts": {
+            "0": 1,
+            "6": 1
+          },
+          "distribution": {
+            "1": 0,
+            "2": 5,
+            "3": 30,
+            "4": 31,
+            "5": 22
+          },
+          "score_sum": 334,
+          "mean": 3.7954545455,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 53,
+          "agree_rate": 0.6022727273,
+          "agree_percent": 60.22727273,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "consumer_b2",
+          "code": "B2",
+          "theme": "trust",
+          "label": {
+            "zh": "信任可接受略高价",
+            "en": "Accept a premium for trust"
+          },
+          "question": {
+            "text_zh": "熟悉和信任的摊贩更容易让我接受价格略高的商品。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "熟悉和信任的摊贩更容易让我接受价格略高的商品。",
+            "source_document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+            "source_xml_paragraph": 90,
+            "source_locator": "量表分析中的题项陈述或题意摘要",
+            "text_en": "Familiar and trusted vendors make it easier for me to accept slightly higher prices.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意因熟悉或信任接受略高价格。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates stronger willingness to accept a slightly higher price because of familiarity or trust."
+          },
+          "source": {
+            "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+            "sheet": "Sheet1",
+            "column": "J",
+            "header": "问题11(B2)",
+            "data_range": "J2:J91"
+          },
+          "sample_n": 90,
+          "valid_n": 90,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 1,
+            "2": 9,
+            "3": 37,
+            "4": 28,
+            "5": 15
+          },
+          "score_sum": 317,
+          "mean": 3.5222222222,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 43,
+          "agree_rate": 0.4777777778,
+          "agree_percent": 47.77777778,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "consumer_b3",
+          "code": "B3",
+          "theme": "trust",
+          "label": {
+            "zh": "整齐与服务吸引购买",
+            "en": "Presentation and service attract"
+          },
+          "question": {
+            "text_zh": "摆放整齐、服务周到的摊贩更能吸引我购买。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "摆放整齐、服务周到的摊贩更能吸引我购买。",
+            "source_document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+            "source_xml_paragraph": 93,
+            "source_locator": "量表分析中的题项陈述或题意摘要",
+            "text_en": "Vendors with tidy displays and attentive service are more likely to attract me to buy.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意陈列与服务增加购买吸引力。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates stronger agreement that presentation and service attract purchases."
+          },
+          "source": {
+            "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+            "sheet": "Sheet1",
+            "column": "N",
+            "header": "问题15(B3)",
+            "data_range": "N2:N91"
+          },
+          "sample_n": 90,
+          "valid_n": 90,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 0,
+            "2": 1,
+            "3": 11,
+            "4": 52,
+            "5": 26
+          },
+          "score_sum": 373,
+          "mean": 4.1444444444,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 78,
+          "agree_rate": 0.8666666667,
+          "agree_percent": 86.66666667,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "consumer_c2",
+          "code": "C2",
+          "theme": "space",
+          "label": {
+            "zh": "为低价多走几步",
+            "en": "Walk farther for lower prices"
+          },
+          "question": {
+            "text_zh": "愿意为便宜多走路",
+            "wording_status": "item_summary_in_analysis_document_not_full_questionnaire_wording",
+            "original_statement_zh": null,
+            "source_document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+            "source_xml_paragraph": 57,
+            "source_locator": "量表分析中的题项陈述或题意摘要",
+            "text_en": "Willing to walk farther for a lower price.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越愿意为低价增加步行；不能直接解释为更高空间成本。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "note_zh": "分析材料把C2称为空间成本维度的负向题；本图展示原始陈述的同意程度，未进行6-x反向计分。",
+            "higher_score_means_en": "A higher score indicates greater willingness to walk farther for lower prices; it does not directly indicate a higher spatial cost.",
+            "note_en": "The analysis treats C2 as reversed relative to a spatial-cost construct. This chart displays agreement with the original statement without applying 6 minus score."
+          },
+          "source": {
+            "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+            "sheet": "Sheet1",
+            "column": "H",
+            "header": "问题9(C2)",
+            "data_range": "H2:H91"
+          },
+          "sample_n": 90,
+          "valid_n": 90,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 1,
+            "2": 2,
+            "3": 15,
+            "4": 54,
+            "5": 18
+          },
+          "score_sum": 356,
+          "mean": 3.9555555556,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 72,
+          "agree_rate": 0.8,
+          "agree_percent": 80.0,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "consumer_c4",
+          "code": "C4",
+          "theme": "space",
+          "label": {
+            "zh": "比较后再购买",
+            "en": "Compare stalls before buying"
+          },
+          "question": {
+            "text_zh": "多比较后购买",
+            "wording_status": "item_summary_in_analysis_document_not_full_questionnaire_wording",
+            "original_statement_zh": null,
+            "source_document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+            "source_xml_paragraph": 59,
+            "source_locator": "量表分析中的题项陈述或题意摘要",
+            "text_en": "Compare more before buying.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越倾向先比较再购买。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates a stronger tendency to compare before purchasing."
+          },
+          "source": {
+            "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
+            "sheet": "Sheet1",
+            "column": "K",
+            "header": "问题12(C4)",
+            "data_range": "K2:K91"
+          },
+          "sample_n": 90,
+          "valid_n": 90,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 4,
+            "2": 1,
+            "3": 14,
+            "4": 55,
+            "5": 16
+          },
+          "score_sum": 348,
+          "mean": 3.8666666667,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 71,
+          "agree_rate": 0.7888888889,
+          "agree_percent": 78.88888889,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        }
+      ]
+    },
+    {
+      "id": "merchant",
+      "label": {
+        "zh": "商户",
+        "en": "Merchants"
+      },
+      "sample_n": 40,
+      "source": {
+        "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
+        "sheet": "Sheet1",
+        "response_range": "A2:M41",
+        "excluded_summary_range": "A42:M42",
+        "summary_row_verification": "A42:M42 contains AVERAGE formulas over rows 2–41; subsequent rows contain other summaries or labels, not additional response records."
+      },
+      "items": [
+        {
+          "id": "merchant_d1",
+          "code": "D1",
+          "theme": "price",
+          "label": {
+            "zh": "关注周边定价",
+            "en": "Watch competitors’ prices"
+          },
+          "question": {
+            "text_zh": "我设定价格时会密切关注周围其他摊位或商超的定价变化。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "我设定价格时会密切关注周围其他摊位或商超的定价变化。",
+            "source_document": "数据采集与分析/生产数据/商家模型.docx",
+            "source_xml_paragraph": 8,
+            "source_locator": "模块化问卷结构：D. 价格反应与策略",
+            "text_en": "When setting my prices, I closely monitor pricing changes at nearby stalls or supermarkets.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意定价时关注周边价格。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates stronger agreement with monitoring surrounding prices when setting prices."
+          },
+          "source": {
+            "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
+            "sheet": "Sheet1",
+            "column": "D",
+            "header": "问题5(D1)",
+            "data_range": "D2:D41"
+          },
+          "sample_n": 40,
+          "valid_n": 40,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 0,
+            "2": 0,
+            "3": 8,
+            "4": 27,
+            "5": 5
+          },
+          "score_sum": 157,
+          "mean": 3.925,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 32,
+          "agree_rate": 0.8,
+          "agree_percent": 80.0,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "merchant_d2",
+          "code": "D2",
+          "theme": "price",
+          "label": {
+            "zh": "对手降价后立即调价",
+            "en": "Immediately adjust after competitors’ cuts"
+          },
+          "question": {
+            "text_zh": "如果竞争对手降价，我会立即调整价格以保持竞争力。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "如果竞争对手降价，我会立即调整价格以保持竞争力。",
+            "source_document": "数据采集与分析/生产数据/商家模型.docx",
+            "source_xml_paragraph": 11,
+            "source_locator": "模块化问卷结构：D. 价格反应与策略",
+            "text_en": "If competitors lower their prices, I will immediately adjust my prices to remain competitive.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意对手降价后立即调价。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates stronger agreement with immediately responding to competitors’ price cuts."
+          },
+          "source": {
+            "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
+            "sheet": "Sheet1",
+            "column": "F",
+            "header": "问题7(D2)",
+            "data_range": "F2:F41"
+          },
+          "sample_n": 40,
+          "valid_n": 40,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 0,
+            "2": 0,
+            "3": 6,
+            "4": 31,
+            "5": 3
+          },
+          "score_sum": 157,
+          "mean": 3.925,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 34,
+          "agree_rate": 0.85,
+          "agree_percent": 85.0,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "merchant_e2",
+          "code": "E2",
+          "theme": "location",
+          "label": {
+            "zh": "位置影响销量",
+            "en": "Location affects sales"
+          },
+          "question": {
+            "text_zh": "摊位位置对我的销量影响非常显著。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "摊位位置对我的销量影响非常显著。",
+            "source_document": "数据采集与分析/生产数据/商家模型.docx",
+            "source_xml_paragraph": 38,
+            "source_locator": "模块化问卷结构：E. 摊位空间与销量",
+            "text_en": "My stall’s location has a substantial effect on my sales.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越同意位置影响销量；这是商户自陈判断。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates a stronger self-reported belief that location affects sales."
+          },
+          "source": {
+            "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
+            "sheet": "Sheet1",
+            "column": "G",
+            "header": "问题8(E2)",
+            "data_range": "G2:G41"
+          },
+          "sample_n": 40,
+          "valid_n": 40,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 0,
+            "2": 0,
+            "3": 9,
+            "4": 22,
+            "5": 9
+          },
+          "score_sum": 160,
+          "mean": 4.0,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 31,
+          "agree_rate": 0.775,
+          "agree_percent": 77.5,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        },
+        {
+          "id": "merchant_e4",
+          "code": "E4",
+          "theme": "location",
+          "label": {
+            "zh": "为好位置付出成本",
+            "en": "Take on costs for a better spot"
+          },
+          "question": {
+            "text_zh": "我愿意付出更多成本（如早到、抢摊）以获得更好的摊位位置。",
+            "wording_status": "verbatim_statement_in_analysis_document",
+            "original_statement_zh": "我愿意付出更多成本（如早到、抢摊）以获得更好的摊位位置。",
+            "source_document": "数据采集与分析/生产数据/商家模型.docx",
+            "source_xml_paragraph": 44,
+            "source_locator": "模块化问卷结构：E. 摊位空间与销量",
+            "text_en": "I am willing to incur additional costs, such as arriving early or competing for a stall, to obtain a better location.",
+            "english_text_status": "translation_of_cited_chinese_statement_or_summary"
+          },
+          "direction": {
+            "higher_score_means_zh": "分数越高，越愿意为更好位置付出成本。",
+            "reverse_scored_for_this_chart": false,
+            "dimension_index_created": false,
+            "higher_score_means_en": "A higher score indicates greater willingness to incur costs for a better stall location."
+          },
+          "source": {
+            "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
+            "sheet": "Sheet1",
+            "column": "J",
+            "header": "问题11(E4)",
+            "data_range": "J2:J41"
+          },
+          "sample_n": 40,
+          "valid_n": 40,
+          "missing_n": 0,
+          "invalid_n": 0,
+          "excluded_invalid_value_counts": {},
+          "distribution": {
+            "1": 0,
+            "2": 0,
+            "3": 10,
+            "4": 8,
+            "5": 22
+          },
+          "score_sum": 172,
+          "mean": 4.3,
+          "agree_scores": [
+            4,
+            5
+          ],
+          "agree_n": 30,
+          "agree_rate": 0.75,
+          "agree_percent": 75.0,
+          "denominator": {
+            "distribution": "valid_n",
+            "mean": "valid_n",
+            "agreement": "valid_n"
+          }
+        }
+      ]
+    }
+  ],
+  "audit_notes": [
+    {
+      "id": "consumer_a3_invalid_codes",
+      "severity": "item_denominator",
+      "text": {
+        "zh": "A3出现0和6各1条，超出1–5量表范围；此题有效n=88，其余选定消费者题有效n=90。未推测异常编码的原意。",
+        "en": "A3 contains one 0 and one 6 outside the 1–5 scale. Its valid n is 88; the other selected consumer items each have n=90. The intended meaning of invalid codes is not inferred."
+      },
+      "item_id": "consumer_a3"
+    },
+    {
+      "id": "consumer_b3_document_mismatch",
+      "severity": "source_discrepancy",
+      "text": {
+        "zh": "原始工作簿B3（N2:N91）均值为4.1444；消费数据分析结果-12.12(1).docx第68段等处写3.64。图表采用按表头B3定位后从原始编码重算的4.1444，不采用该文字均值。",
+        "en": "The source workbook B3 column (N2:N91) has a mean of 4.1444; the analysis document reports 3.64 in paragraph 68 and elsewhere. Charts use the value recomputed from the column explicitly labeled B3."
+      },
+      "item_id": "consumer_b3",
+      "document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
+      "source_xml_paragraph": 68
+    },
+    {
+      "id": "consumer_spatial_wording",
+      "severity": "wording_provenance",
+      "text": {
+        "zh": "C2和C4的中文仅使用分析文档中可核对的题意摘要，没有把自行补写句子当作原问卷逐字原文。",
+        "en": "The Chinese C2 and C4 text is a verifiable item summary from the analysis document, not an invented verbatim questionnaire statement."
+      },
+      "item_ids": [
+        "consumer_c2",
+        "consumer_c4"
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "zh": "这些比例描述本次问卷样本，不代表所有市集或城市人群。",
+      "en": "These shares describe the surveyed sample, not all markets or city populations."
+    },
+    {
+      "zh": "消费者与商户回答不同陈述，不能把两侧题目当作同一量表直接比较高低。",
+      "en": "Consumers and merchants answered different statements; their item scores are not directly comparable measures."
+    },
+    {
+      "zh": "均值仅用于描述有序的1–5回答；同意比例是选择4或5的比例，不是实际购买或调价发生率。",
+      "en": "Means describe ordered 1–5 responses. Agreement is the share selecting 4 or 5, not an observed purchase or repricing rate."
+    },
+    {
+      "zh": "自陈横截面数据只能呈现样本中的回答分布，不能证明因果关系或市场均衡。",
+      "en": "Self-reported cross-sectional responses describe sample distributions and do not establish causation or market equilibrium."
+    },
+    {
+      "zh": "本次只汇总预先选定的10个单题，未据此验证完整量表或创建维度指数。",
+      "en": "This summary covers ten selected individual items; it neither validates the full instrument nor creates dimension indices."
+    }
+  ]
+}
