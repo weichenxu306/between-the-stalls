@@ -62,6 +62,8 @@
       if (!story || reducedMotion || !storyVisible) return;
       const geometry = storyGeometry();
       const progress = clamp((window.scrollY - geometry.top) / geometry.distance);
+      // Match the short-screen footer spacing in styles.css without changing scroll timing.
+      const frameworkPhotoHeight = window.innerHeight <= 800 ? 30 : 36;
       const keyframes = mobilePreference.matches
         ? [
           { at: 0, x: 0, y: 0, w: 100, h: 100, radius: 0, dim: 0.32 },
@@ -82,8 +84,8 @@
           { at: 0.52, x: 6, y: 21, w: 42, h: 64, radius: 4, dim: 0.04 },
           { at: 0.59, x: 51, y: 20, w: 43, h: 65, radius: 4, dim: 0.04 },
           { at: 0.75, x: 51, y: 20, w: 43, h: 65, radius: 4, dim: 0.04 },
-          { at: 0.83, x: 40, y: 34, w: 20, h: 36, radius: 4, dim: 0.08 },
-          { at: 1, x: 40, y: 34, w: 20, h: 36, radius: 4, dim: 0.08 }
+          { at: 0.83, x: 40, y: 34, w: 20, h: frameworkPhotoHeight, radius: 4, dim: 0.08 },
+          { at: 1, x: 40, y: 34, w: 20, h: frameworkPhotoHeight, radius: 4, dim: 0.08 }
         ];
       const nextFrame = keyframes.findIndex(keyframe => keyframe.at > progress);
       const segment = nextFrame < 0 ? keyframes.length - 2 : Math.max(0, nextFrame - 1);

@@ -87,8 +87,23 @@ html[data-theme=dark]{--paper:#1c2620;--surface:#222f27;--surface-soft:#2a372e;-
 @media(max-width:768px){.framework-path-desktop{display:none}.framework-path-mobile{display:block}}
 
 /* On a phone the framework reads vertically instead of surrounding a narrow portrait. */
-.framework-details,.framework-list{display:contents}
+.framework-details,.framework-list,.framework-bottom{display:contents}
 .framework-fallback-photo{display:none}
+/* Keep the lower branch and its note in one flow, with room above chapter navigation. */
+@media(min-width:769px){
+ .is-reduced-motion .scene-framework .dimension-space,html:not(.js) .scene-framework .dimension-space{top:48%}
+ html.js:not(.is-reduced-motion) .framework-bottom{position:absolute;top:calc(70% + 16px);left:var(--gutter);right:var(--gutter);display:grid;justify-items:center;gap:14px}
+ html.js:not(.is-reduced-motion) .framework-bottom:before{content:"";position:absolute;top:-16px;left:50%;width:1px;height:12px;background:#aabe7c;opacity:calc(var(--scene-line)*.6)}
+ html.js:not(.is-reduced-motion) .scene-framework .dimension-space{position:static;max-width:100%;width:max-content;gap:20px}
+ html.js:not(.is-reduced-motion) .scene-framework .dimension-space p{max-width:28em}
+ html.js:not(.is-reduced-motion) .scene-framework .framework-note{position:static;margin:0;max-width:100%;font-size:10px;line-height:1.8;text-align:center}
+}
+@media(min-width:769px) and (max-height:800px){
+ html.js:not(.is-reduced-motion) .framework-bottom{top:calc(64% + 16px)}
+ html.js:not(.is-reduced-motion) .scene-framework .framework-heading{top:112px}
+ html.js:not(.is-reduced-motion) .scene-framework .framework-heading h2{font-size:clamp(26px,2.75vw,36px);line-height:1.2;margin-top:12px}
+ html.js:not(.is-reduced-motion) .scene-framework .dimension h3{font-size:28px}
+}
 @media(max-width:768px){
  .scene-framework .framework-heading{top:clamp(96px,13svh,120px);text-align:left}
  .scene-framework .chapter-index{font-size:8px;letter-spacing:.09em}
@@ -98,7 +113,7 @@ html[data-theme=dark]{--paper:#1c2620;--surface:#222f27;--surface-soft:#2a372e;-
  .framework-details{display:block;position:absolute;top:calc(50% + 18px);left:var(--gutter);right:var(--gutter)}
  .framework-list{display:grid}
  .scene-framework .dimension{position:static;display:grid;grid-template-columns:30px minmax(0,1fr);align-items:center;gap:12px;width:100%;max-width:none;min-height:56px;padding:8px 0;border-top:1px solid #b6c49438}
- .scene-framework .dimension:last-child{border-bottom:1px solid #b6c49438}
+ .scene-framework .dimension-space{border-bottom:1px solid #b6c49438}
  .scene-framework .dimension>div{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px}
  .scene-framework .dimension-symbol{font-size:25px;min-width:0;margin:0;white-space:nowrap}
  .scene-framework .dimension-space .dimension-symbol{font-size:20px;letter-spacing:-.08em}
