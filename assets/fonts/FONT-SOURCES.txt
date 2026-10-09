@@ -7,6 +7,9 @@ Noto Sans SC variable subset, weight 400-700
 Source: https://github.com/google/fonts/tree/main/ofl/notosanssc
 Original font: NotoSansSC[wght].ttf
 License: Noto-Sans-SC-LICENSE.txt (SIL Open Font License 1.1)
-Subset locally with fontTools: 578 Chinese characters and punctuation from the existing website plus storyboard headlines. No website text was uploaded to a font service.
+Subset locally with fontTools 4.66.1: 734 Chinese characters and punctuation, preserving all 578 previous codepoints and covering current index.html, app.js and survey/research data copy. No website text was uploaded to a font service.
+Weight axis retained: minimum 400, default 400, maximum 700.
+Subset refreshed: 2026-10-09
 Subset coverage: noto-sans-sc-subset-characters.txt
-Font size: 144696 bytes
+Font size: 181568 bytes
+Official full font SHA-256: a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da
