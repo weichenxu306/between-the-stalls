@@ -2,8 +2,8 @@
   "schema_version": 1,
   "verified_on": "2026-10-08",
   "description": {
-    "zh": "从原始问卷工作簿逐题重算的聚合分布，不包含个人答卷。",
-    "en": "Item-level aggregates recomputed from the original response workbooks; no individual responses are included."
+    "zh": "按原始问卷工作簿逐题重新统计，展示汇总结果，不包含个人答卷。",
+    "en": "Each question has been recounted from the original survey workbooks. Only summary results are included, without individual responses."
   },
   "scale": {
     "type": "five_point_likert",
@@ -29,8 +29,8 @@
       5
     ],
     "agreement_label": {
-      "zh": "选择4或5的比例",
-      "en": "Share selecting 4 or 5"
+      "zh": "选择 4 或 5 的比例",
+      "en": "Percentage choosing 4 or 5"
     },
     "source_documents": [
       {
@@ -77,8 +77,8 @@
           "code": "A1",
           "theme": "price",
           "label": {
-            "zh": "五金比商超便宜1–5元时选摊贩",
-            "en": "Prefer vendor hardware at ¥1–5 less than supermarkets"
+            "zh": "五金比商超便宜 1–5 元时选摊贩",
+            "en": "Choose a stall when hardware is ¥1–5 cheaper than at a supermarket"
           },
           "question": {
             "text_zh": "如果市集摊贩的五金产品价格比商超便宜 1–5 元，我更倾向于选择摊贩而非商超。",
@@ -91,10 +91,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意在题设价差下选择摊贩。",
+            "higher_score_means_zh": "分数越高，表示越同意在题目给出的价差下选择摊贩。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates stronger agreement with choosing the vendor at the price difference specified in the statement."
+            "higher_score_means_en": "A higher score means stronger agreement with choosing the stall at the price difference given in the question."
           },
           "source": {
             "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
@@ -135,8 +135,8 @@
           "code": "A3",
           "theme": "price",
           "label": {
-            "zh": "降价改变购买计划",
-            "en": "Change plans after a price cut"
+            "zh": "降价后改变购买计划",
+            "en": "Change buying plans after a price cut"
           },
           "question": {
             "text_zh": "如果某摊位突然降价，我会改变原本的购买计划。",
@@ -149,10 +149,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意降价会改变购买计划。",
+            "higher_score_means_zh": "分数越高，表示越同意降价会改变自己的购买计划。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates stronger agreement that a price cut would change the purchasing plan."
+            "higher_score_means_en": "A higher score means stronger agreement that a price cut would change buying plans."
           },
           "source": {
             "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
@@ -196,8 +196,8 @@
           "code": "B2",
           "theme": "trust",
           "label": {
-            "zh": "信任可接受略高价",
-            "en": "Accept a premium for trust"
+            "zh": "愿意为信任的摊贩多付一点",
+            "en": "Pay a little more to a trusted vendor"
           },
           "question": {
             "text_zh": "熟悉和信任的摊贩更容易让我接受价格略高的商品。",
@@ -210,10 +210,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意因熟悉或信任接受略高价格。",
+            "higher_score_means_zh": "分数越高，表示越愿意因为熟悉或信任而接受略高的价格。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates stronger willingness to accept a slightly higher price because of familiarity or trust."
+            "higher_score_means_en": "A higher score means greater willingness to pay a little more to a familiar or trusted vendor."
           },
           "source": {
             "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
@@ -254,8 +254,8 @@
           "code": "B3",
           "theme": "trust",
           "label": {
-            "zh": "整齐与服务吸引购买",
-            "en": "Presentation and service attract"
+            "zh": "整齐的陈列和周到的服务更吸引人",
+            "en": "Prefer tidy displays and good service"
           },
           "question": {
             "text_zh": "摆放整齐、服务周到的摊贩更能吸引我购买。",
@@ -268,10 +268,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意陈列与服务增加购买吸引力。",
+            "higher_score_means_zh": "分数越高，表示越认同整齐的陈列和周到的服务会吸引自己购买。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates stronger agreement that presentation and service attract purchases."
+            "higher_score_means_en": "A higher score means stronger agreement that tidy displays and good service encourage buying."
           },
           "source": {
             "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
@@ -312,8 +312,8 @@
           "code": "C2",
           "theme": "space",
           "label": {
-            "zh": "为低价多走几步",
-            "en": "Walk farther for lower prices"
+            "zh": "为了便宜多走几步",
+            "en": "Walk farther for a lower price"
           },
           "question": {
             "text_zh": "愿意为便宜多走路",
@@ -326,12 +326,12 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越愿意为低价增加步行；不能直接解释为更高空间成本。",
+            "higher_score_means_zh": "分数越高，表示越愿意为了便宜多走路，不能直接理解为出行成本更高。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "note_zh": "分析材料把C2称为空间成本维度的负向题；本图展示原始陈述的同意程度，未进行6-x反向计分。",
-            "higher_score_means_en": "A higher score indicates greater willingness to walk farther for lower prices; it does not directly indicate a higher spatial cost.",
-            "note_en": "The analysis treats C2 as reversed relative to a spatial-cost construct. This chart displays agreement with the original statement without applying 6 minus score."
+            "note_zh": "分析材料将 C2 作为空间成本的反向题。这里保留原始分数，展示对原陈述的同意程度，没有按“6 减原分数”换算。",
+            "higher_score_means_en": "A higher score means greater willingness to walk farther for a lower price. It does not mean a higher spatial cost.",
+            "note_en": "The analysis uses C2 as a reverse-coded item for spatial cost. This chart keeps the original scores to show agreement with the statement; it does not replace each score with 6 minus that score."
           },
           "source": {
             "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
@@ -386,10 +386,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越倾向先比较再购买。",
+            "higher_score_means_zh": "分数越高，表示越倾向于先比较再购买。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates a stronger tendency to compare before purchasing."
+            "higher_score_means_en": "A higher score means a stronger preference for comparing before buying."
           },
           "source": {
             "workbook": "数据采集与分析/消费数据/消费数据.xlsx",
@@ -461,10 +461,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意定价时关注周边价格。",
+            "higher_score_means_zh": "分数越高，表示越认同定价时会关注周边的价格。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates stronger agreement with monitoring surrounding prices when setting prices."
+            "higher_score_means_en": "A higher score means stronger agreement with checking nearby prices when setting one’s own."
           },
           "source": {
             "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
@@ -506,7 +506,7 @@
           "theme": "price",
           "label": {
             "zh": "对手降价后立即调价",
-            "en": "Immediately adjust after competitors’ cuts"
+            "en": "Adjust prices as soon as competitors cut theirs"
           },
           "question": {
             "text_zh": "如果竞争对手降价，我会立即调整价格以保持竞争力。",
@@ -519,10 +519,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意对手降价后立即调价。",
+            "higher_score_means_zh": "分数越高，表示越认同对手降价后会立即调整自己的价格。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates stronger agreement with immediately responding to competitors’ price cuts."
+            "higher_score_means_en": "A higher score means stronger agreement with adjusting prices immediately after a competitor’s price cut."
           },
           "source": {
             "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
@@ -577,10 +577,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越同意位置影响销量；这是商户自陈判断。",
+            "higher_score_means_zh": "分数越高，表示商户越认为位置会影响销量。这是商户自己的判断。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates a stronger self-reported belief that location affects sales."
+            "higher_score_means_en": "A higher score means the vendor believes more strongly that location affects sales. This is the vendor’s own assessment."
           },
           "source": {
             "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
@@ -621,8 +621,8 @@
           "code": "E4",
           "theme": "location",
           "label": {
-            "zh": "为好位置付出成本",
-            "en": "Take on costs for a better spot"
+            "zh": "愿意为好位置付出更多",
+            "en": "Take on extra costs for a better spot"
           },
           "question": {
             "text_zh": "我愿意付出更多成本（如早到、抢摊）以获得更好的摊位位置。",
@@ -635,10 +635,10 @@
             "english_text_status": "translation_of_cited_chinese_statement_or_summary"
           },
           "direction": {
-            "higher_score_means_zh": "分数越高，越愿意为更好位置付出成本。",
+            "higher_score_means_zh": "分数越高，表示越愿意为更好的摊位位置付出额外成本。",
             "reverse_scored_for_this_chart": false,
             "dimension_index_created": false,
-            "higher_score_means_en": "A higher score indicates greater willingness to incur costs for a better stall location."
+            "higher_score_means_en": "A higher score means greater willingness to take on extra costs for a better stall location."
           },
           "source": {
             "workbook": "数据采集与分析/生产数据/商家数据分析.xlsx",
@@ -682,8 +682,8 @@
       "id": "consumer_a3_invalid_codes",
       "severity": "item_denominator",
       "text": {
-        "zh": "A3出现0和6各1条，超出1–5量表范围；此题有效n=88，其余选定消费者题有效n=90。未推测异常编码的原意。",
-        "en": "A3 contains one 0 and one 6 outside the 1–5 scale. Its valid n is 88; the other selected consumer items each have n=90. The intended meaning of invalid codes is not inferred."
+        "zh": "A3 有一个回答记为 0，另一个记为 6，都超出了 1–5 的量表范围，因此这题按 88 份有效回答计算。其余选定的消费者题各有 90 份有效回答。无法确认这两个异常值原本想表达什么，因此未作修正。",
+        "en": "A3 has one answer coded 0 and another coded 6, both outside the 1–5 scale. They are excluded, leaving 88 valid answers; the other selected consumer questions each have 90. The two values have not been corrected because their intended meaning is unknown."
       },
       "item_id": "consumer_a3"
     },
@@ -691,8 +691,8 @@
       "id": "consumer_b3_document_mismatch",
       "severity": "source_discrepancy",
       "text": {
-        "zh": "原始工作簿B3（N2:N91）均值为4.1444；消费数据分析结果-12.12(1).docx第68段等处写3.64。图表采用按表头B3定位后从原始编码重算的4.1444，不采用该文字均值。",
-        "en": "The source workbook B3 column (N2:N91) has a mean of 4.1444; the analysis document reports 3.64 in paragraph 68 and elsewhere. Charts use the value recomputed from the column explicitly labeled B3."
+        "zh": "原始工作簿 B3 列（N2:N91）的均值为 4.1444，但消费数据分析结果-12.12(1).docx 第 68 段等处写的是 3.64。图表使用原始工作簿中标为 B3 的这一列重新计算的结果：4.1444。",
+        "en": "The mean for B3 in the original workbook (N2:N91) is 4.1444. The analysis document gives 3.64 in paragraph 68 and elsewhere. The charts use 4.1444, recalculated from the workbook column labeled B3."
       },
       "item_id": "consumer_b3",
       "document": "数据采集与分析/消费数据分析结果-12.12(1).docx",
@@ -702,8 +702,8 @@
       "id": "consumer_spatial_wording",
       "severity": "wording_provenance",
       "text": {
-        "zh": "C2和C4的中文仅使用分析文档中可核对的题意摘要，没有把自行补写句子当作原问卷逐字原文。",
-        "en": "The Chinese C2 and C4 text is a verifiable item summary from the analysis document, not an invented verbatim questionnaire statement."
+        "zh": "C2 和 C4 使用的是分析文档中的题意摘要，不能视为完整的问卷原文。",
+        "en": "C2 and C4 use question summaries from the analysis document. They are not the full original questionnaire wording."
       },
       "item_ids": [
         "consumer_c2",
@@ -713,24 +713,24 @@
   ],
   "limitations": [
     {
-      "zh": "这些比例描述本次问卷样本，不代表所有市集或城市人群。",
-      "en": "These shares describe the surveyed sample, not all markets or city populations."
+      "zh": "这些比例只描述本次受访者的回答，不能代表所有市集或城市居民。",
+      "en": "These percentages describe the people surveyed. They do not represent all markets or urban residents."
     },
     {
-      "zh": "消费者与商户回答不同陈述，不能把两侧题目当作同一量表直接比较高低。",
-      "en": "Consumers and merchants answered different statements; their item scores are not directly comparable measures."
+      "zh": "消费者和商户回答的题目不同，不能直接比较两组的分数高低。",
+      "en": "Consumers and merchants answered different questions, so their scores cannot be compared directly."
     },
     {
-      "zh": "均值仅用于描述有序的1–5回答；同意比例是选择4或5的比例，不是实际购买或调价发生率。",
-      "en": "Means describe ordered 1–5 responses. Agreement is the share selecting 4 or 5, not an observed purchase or repricing rate."
+      "zh": "均值是对 1–5 级回答的概括。同意比例指选择 4 或 5 的人数占比，不是实际购买或调整价格的比例。",
+      "en": "The mean summarizes answers on the ordered 1–5 scale. Agreement is the percentage choosing 4 or 5, not the percentage who actually bought something or changed a price."
     },
     {
-      "zh": "自陈横截面数据只能呈现样本中的回答分布，不能证明因果关系或市场均衡。",
-      "en": "Self-reported cross-sectional responses describe sample distributions and do not establish causation or market equilibrium."
+      "zh": "这些是一次调查中由受访者自己报告的回答，可以描述样本情况，但不能证明因果关系或市场是否达到均衡。",
+      "en": "These are self-reported answers from a single survey. They describe the sample but cannot establish cause and effect or show whether the market is in equilibrium."
     },
     {
-      "zh": "本次只汇总预先选定的10个单题，未据此验证完整量表或创建维度指数。",
-      "en": "This summary covers ten selected individual items; it neither validates the full instrument nor creates dimension indices."
+      "zh": "这里只统计预先选定的 10 道题，每题单独计算，没有验证完整问卷量表，也没有把题目合成为维度分数。",
+      "en": "This summary covers 10 questions selected in advance. Each is reported separately; the full survey scale has not been validated, and no combined scores have been created for its dimensions."
     }
   ]
 }
