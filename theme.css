@@ -1,0 +1,215 @@
+/* Whole-site palettes. Dark preserves the original evergreen design in styles.css.
+   Light follows the selected Sandstone & Forest direction; photography stays natural. */
+html:not([data-theme="dark"]) {
+  --paper: #e9dfce;
+  --surface: #f3eddf;
+  --surface-soft: #ded5c3;
+  --ink: #273c32;
+  --muted: #5c665b;
+  --line: #c7c8b6;
+  --accent: #4c6551;
+  --accent-soft: #d7ddc9;
+  color-scheme: light;
+}
+
+html:not([data-theme="dark"]) body {
+  background: var(--paper);
+}
+
+html:not([data-theme="dark"]) :focus-visible {
+  outline-color: var(--accent);
+}
+
+html:not([data-theme="dark"]) ::selection {
+  background: #4c6551;
+  color: #f3eddf;
+}
+
+html:not([data-theme="dark"]) #readingProgress,
+html:not([data-theme="dark"]) .skip-link {
+  background: var(--accent);
+  color: var(--surface);
+}
+
+html:not([data-theme="dark"]) .site-header {
+  background: linear-gradient(#e9dfcef5, #e9dfcee8);
+  color: var(--ink);
+  border-bottom-color: var(--line);
+}
+
+html:not([data-theme="dark"]) :is(.brand small, .motion-toggle) {
+  color: var(--muted);
+}
+
+html:not([data-theme="dark"]) :is(.nav a:hover, .header-actions button:hover, .motion-toggle:hover, .nav .motion-toggle[aria-pressed="true"]) {
+  color: var(--accent);
+}
+
+html:not([data-theme="dark"]) :is(.header-actions .lang-toggle, .header-actions .theme-toggle) {
+  border-color: var(--line);
+}
+
+html:not([data-theme="dark"]) .header-actions .theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+html:not([data-theme="dark"]) :is(.story-run, .places, .researcher) {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html:not([data-theme="dark"]) .stage-grid {
+  background-image: linear-gradient(90deg,
+    transparent calc(25% - 1px), #273c3210 25%, transparent calc(25% + 1px),
+    transparent calc(50% - 1px), #273c3210 50%, transparent calc(50% + 1px),
+    transparent calc(75% - 1px), #273c3210 75%, transparent calc(75% + 1px));
+}
+
+/* The opening title sits on a photograph, so its original light lettering remains. */
+html:not([data-theme="dark"]) .scene-opening {
+  color: #eeeee4;
+}
+
+html:not([data-theme="dark"]) .story-run :is(.chapter-index, .photo-coordinate, .framework-note) {
+  color: var(--muted);
+}
+
+html:not([data-theme="dark"]) .story-run :is(.scene-question p, .perspective-copy > p, .dimension p) {
+  color: var(--muted);
+}
+
+html:not([data-theme="dark"]) .story-run :is(.accent-text, .dimension-symbol, .story-prompts dt) {
+  color: var(--accent);
+}
+
+html:not([data-theme="dark"]) .dimension,
+html:not([data-theme="dark"]) .story-prompts dd {
+  color: var(--ink);
+}
+
+html:not([data-theme="dark"]) :is(.story-prompts, .story-prompts > div, .scene-framework .dimension) {
+  border-color: var(--line);
+}
+
+html:not([data-theme="dark"]) .framework-lines {
+  stroke: var(--accent);
+}
+
+html:not([data-theme="dark"]) .framework-lines circle {
+  fill: var(--accent);
+}
+
+html.js:not(.is-reduced-motion):not([data-theme="dark"]) .framework-bottom::before {
+  background: var(--accent);
+}
+
+/* Chapter controls blend from photo-overlay colors into the sandstone scene. */
+html:not([data-theme="dark"]) .story-chapters button {
+  color: color-mix(in srgb, var(--muted), #e4e9dc calc(var(--scene-0) * 100%));
+}
+
+html:not([data-theme="dark"]) .story-chapters button.is-active {
+  color: color-mix(in srgb, var(--accent), #daeb9c calc(var(--scene-0) * 100%));
+}
+
+html:not([data-theme="dark"]) .chapter-track {
+  background: color-mix(in srgb, var(--line), #aec39166 calc(var(--scene-0) * 100%));
+}
+
+html:not([data-theme="dark"]) .chapter-track i {
+  background: color-mix(in srgb, var(--accent), #daeb9c calc(var(--scene-0) * 100%));
+}
+
+html:not([data-theme="dark"]) .story-skip {
+  color: color-mix(in srgb, var(--ink), #eeeee4 calc(var(--scene-0) * 100%));
+}
+
+html.is-reduced-motion:not([data-theme="dark"]) :is(.scene-question, .scene-perspective, .scene-framework),
+html:not(.js):not([data-theme="dark"]) :is(.scene-question, .scene-perspective, .scene-framework) {
+  background: var(--paper);
+}
+
+html:not([data-theme="dark"]) :is(.places .section-label, .researcher .section-label) {
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+html:not([data-theme="dark"]) :is(.places-heading p, .place-photo p, .researcher-copy p, .researcher-portrait figcaption, .signature span) {
+  color: var(--muted);
+}
+
+html:not([data-theme="dark"]) .place-photo figcaption {
+  color: #eeeee4;
+}
+
+html:not([data-theme="dark"]) .researcher-copy p.personal-note {
+  color: var(--ink);
+}
+
+html:not([data-theme="dark"]) :is(.researcher .text-link, .closing-word) {
+  color: var(--accent);
+}
+
+html:not([data-theme="dark"]) :is(.closing-word, .site-footer) {
+  border-color: var(--line);
+}
+
+html:not([data-theme="dark"]) .site-footer {
+  background: var(--paper);
+  color: var(--muted);
+}
+
+html:not([data-theme="dark"]) .site-footer a:hover {
+  color: var(--accent);
+}
+
+/* The archive is the forest-colored counterpoint from the approved palette. */
+html:not([data-theme="dark"]) .archive {
+  --paper: #273c32;
+  --surface: #30483b;
+  --surface-soft: #354e40;
+  --ink: #f3eddf;
+  --muted: #c2caba;
+  --line: #516255;
+  --accent: #d4dfb9;
+  --accent-soft: #405640;
+  color-scheme: dark;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html:not([data-theme="dark"]) .archive ::selection {
+  background: #d4dfb9;
+  color: #273c32;
+}
+
+html:not([data-theme="dark"]) .archive .survey-explorer {
+  --score-1: #40564b;
+  --score-2: #617763;
+  --score-3: #8fa17f;
+  --score-4: #b9c6a6;
+  --score-5: #d4dfb9;
+}
+
+html:not([data-theme="dark"]) .archive .survey-segment {
+  color: #fff;
+}
+
+html:not([data-theme="dark"]) .archive .survey-segment:nth-child(n+3) {
+  color: #15261d;
+}
+
+html:not([data-theme="dark"]) .lightbox::backdrop {
+  background: #273c32db;
+}
+
+@media (max-width: 960px) {
+  html:not([data-theme="dark"]) .site-header .nav {
+    background: #e9dfcefa;
+    border-color: var(--line);
+  }
+
+  html:not([data-theme="dark"]) .nav .motion-toggle {
+    border-color: var(--line);
+  }
+}

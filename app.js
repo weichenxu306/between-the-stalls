@@ -196,6 +196,215 @@ const articleGroups = [
 
 const mediaGroups = [
   {
+  "id": "xinjiang-return",
+  "title": {
+    "zh": "重返新疆",
+    "en": "Returning to Xinjiang"
+  },
+  "article": {
+    "zh": "成果分享 · 与摊主一起翻阅研究手册",
+    "en": "Sharing the research booklet with market vendors"
+  },
+  "items": [
+    {
+      "src": "assets/xinjiang-return-01.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "在摊位旁，一起翻阅研究手册。",
+        "en": "Looking through the research booklet beside a stall."
+      },
+      "alt": {
+        "zh": "徐玮晨与一位摊主在服装摊旁共同翻阅研究手册",
+        "en": "Weichen Xu and a vendor look through the research booklet beside a clothing stall"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-02.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "摊主翻阅研究手册。",
+        "en": "A vendor reads the research booklet."
+      },
+      "alt": {
+        "zh": "一位摊主站在服装摊前阅读打开的研究手册",
+        "en": "A vendor reads the open research booklet at his clothing stall"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-03.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "翻开手册，也打开一段对话。",
+        "en": "Sharing the booklet and a conversation."
+      },
+      "alt": {
+        "zh": "徐玮晨与两位摊主微笑着交流，手中展开研究手册",
+        "en": "Weichen Xu shares an open booklet and a conversation with two smiling vendors"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-04.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "摊位前的交流瞬间。",
+        "en": "A moment of conversation at the market."
+      },
+      "alt": {
+        "zh": "徐玮晨拿着研究手册与一位坐在摊位前的摊主交流",
+        "en": "Weichen Xu holds the research booklet while speaking with a seated vendor"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-05.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "坐在鞋摊旁，继续交流。",
+        "en": "Continuing the conversation beside a shoe stall."
+      },
+      "alt": {
+        "zh": "徐玮晨拿着手册坐在鞋摊旁，与摊位上的人交流",
+        "en": "Weichen Xu sits beside a shoe stall with the booklet, talking with people at the stall"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-06.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "在服装摊前，分享研究手册。",
+        "en": "Sharing the booklet at a clothing stall."
+      },
+      "alt": {
+        "zh": "徐玮晨与一位戴黄色围巾的摊主在服装摊前交流手册内容",
+        "en": "Weichen Xu discusses the booklet with a vendor wearing a yellow scarf at a clothing stall"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-07.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "饮品摊旁的共同阅读。",
+        "en": "Reading together beside a drinks stall."
+      },
+      "alt": {
+        "zh": "徐玮晨与一位摊主在饮品摊旁一起看研究手册",
+        "en": "Weichen Xu and a vendor look at the research booklet beside a drinks stall"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-08.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "带回市集的研究手册。",
+        "en": "The research booklet, back at the market."
+      },
+      "alt": {
+        "zh": "徐玮晨手持《超越价格：集市里的经济学》手册与一杯饮品",
+        "en": "Weichen Xu holds the research booklet Beyond Price: Economics in the Bazaar and a drink"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-09.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "蔬菜摊前的回访。",
+        "en": "A return visit to a vegetable stall."
+      },
+      "alt": {
+        "zh": "徐玮晨拿着手册蹲坐在蔬菜摊旁，对面是一位摊主",
+        "en": "Weichen Xu holds the booklet beside a vegetable stall, opposite a vendor"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-10.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "与服装摊主一起翻阅。",
+        "en": "Looking through the booklet with a clothing vendor."
+      },
+      "alt": {
+        "zh": "徐玮晨与一位服装摊主一起阅读展开的研究手册",
+        "en": "Weichen Xu and a clothing vendor read the open research booklet together"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-11.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "在一页页内容中展开交流。",
+        "en": "Talking through the booklet, page by page."
+      },
+      "alt": {
+        "zh": "徐玮晨与一位戴黑色帽子的摊主一起翻阅研究手册",
+        "en": "Weichen Xu and a vendor in a black cap look through the research booklet"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-12.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "带着研究手册，在市集合影。",
+        "en": "A photograph together with the research booklet."
+      },
+      "alt": {
+        "zh": "徐玮晨手持研究手册，与一位摊主在市集遮阳棚下合影",
+        "en": "Weichen Xu holds the research booklet for a photograph with a vendor under a market canopy"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-13.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "在食品摊前翻开研究手册。",
+        "en": "Opening the research booklet at a food stall."
+      },
+      "alt": {
+        "zh": "徐玮晨与一位坐在食品摊前的摊主一起看研究手册",
+        "en": "Weichen Xu looks through the research booklet with a vendor seated at a food stall"
+      }
+    },
+    {
+      "src": "assets/xinjiang-return-14.jpg",
+      "type": "image",
+      "width": 1706,
+      "height": 1279,
+      "caption": {
+        "zh": "市集里的面对面交流。",
+        "en": "A face-to-face conversation at the market."
+      },
+      "alt": {
+        "zh": "徐玮晨手持研究手册，与一位拿着手机的人在市集遮阳棚下交流",
+        "en": "Weichen Xu holds the research booklet while talking with a person holding a phone under a market canopy"
+      }
+    }
+  ]
+},
+  {
     id: "xinjiang-bazaar",
     title: { zh: "新疆市集总览", en: "Xinjiang Bazaar Overview" },
     article: { zh: "关联：价格敏感度 / 多维竞争机制", en: "Linked: Price Sensitivity / Multidimensional Competition" },
@@ -334,16 +543,17 @@ function renderMediaTabs() {
   });
 }
 
-function selectMediaGroup(id) {
+function selectMediaGroup(id, index = 0) {
   if (!mediaGroups.some(group => group.id === id)) return;
   state.activeMedia = id;
-  state.activeIndex = 0;
+  state.activeIndex = Math.max(0, Math.min(index, currentMediaGroup().items.length - 1));
   renderMediaTabs();
   renderFeaturedMedia();
   renderMediaGrid();
 }
 
 function mediaElement(media, alt, interactive = false) {
+  if (alt && media.alt) alt = t(media.alt);
   if (media.type === "video") {
     return `<video src="${media.src}" controls playsinline preload="metadata" aria-label="${escapeHtml(alt)}" ${interactive ? "" : "muted"}></video>`;
   }
@@ -357,7 +567,7 @@ function renderFeaturedMedia() {
     ${mediaElement(media, `${t(group.title)} · ${state.activeIndex + 1}`, true)}
     <div class="caption">
       <strong>${t(group.title)}</strong>
-      <span>${t(group.article)}</span>
+      <span>${escapeHtml(t(media.caption || group.article))}</span>
       <span class="media-count">${String(state.activeIndex + 1).padStart(2, "0")} / ${String(group.items.length).padStart(2, "0")}</span>
     </div>
   `;
@@ -371,7 +581,7 @@ function renderMediaGrid() {
   const group = currentMediaGroup();
   const root = document.getElementById("mediaGrid");
   root.innerHTML = group.items.map((media, index) => `
-    <button class="media-card" type="button" data-index="${index}" aria-label="${escapeHtml(t(group.title))} · ${index + 1}${state.lang === "zh" ? "，打开影像" : ", open image"}">
+    <button class="media-card" type="button" data-index="${index}" aria-label="${escapeHtml(t(media.caption || group.title))} · ${index + 1}${state.lang === "zh" ? "，打开影像" : ", open image"}">
       ${mediaElement(media, "")}
       <span class="caption">${t(group.title)} · ${index + 1}</span>
     </button>
@@ -396,7 +606,8 @@ function openLightbox(media) {
   const content = document.getElementById("lightboxContent");
   const group = currentMediaGroup();
   lightboxReturnFocus = document.activeElement;
-  content.innerHTML = mediaElement(media, `${t(group.title)} · ${state.activeIndex + 1}`, true);
+  content.innerHTML = mediaElement(media, `${t(group.title)} · ${state.activeIndex + 1}`, true)
+    + (media.caption ? `<p class="lightbox-caption">${escapeHtml(t(media.caption))} <span>${String(state.activeIndex + 1).padStart(2, "0")} / ${group.items.length}</span></p>` : "");
   lightbox.showModal();
   previousBodyOverflow = document.body.style.overflow;
   document.body.style.overflow = "hidden";
@@ -581,7 +792,10 @@ function applyTheme() {
   document.documentElement.style.colorScheme = state.theme;
   updateThemeLabel();
   const themeMeta = document.querySelector('meta[name="theme-color"]');
-  if (themeMeta) themeMeta.content = "#141c19";
+  if (themeMeta) themeMeta.content = state.theme === "dark" ? "#141c19" : "#e9dfce";
+  document.querySelectorAll('.brand img, .researcher-title > img').forEach(logo => {
+    logo.src = state.theme === "dark" ? "assets/market-mark.svg" : "assets/market-mark-forest.svg";
+  });
   renderChart();
 }
 
@@ -672,6 +886,13 @@ document.addEventListener("keydown", event => {
 mobileNavigation.addEventListener("change", () => setMenuOpen(false));
 document.querySelectorAll("[data-media-link]").forEach(link => {
   link.addEventListener("click", () => selectMediaGroup(link.dataset.mediaLink));
+});
+
+document.querySelectorAll("[data-return-photo]").forEach(button => {
+  button.addEventListener("click", () => {
+    selectMediaGroup("xinjiang-return", Number(button.dataset.returnPhoto));
+    openLightbox(currentMediaGroup().items[state.activeIndex]);
+  });
 });
 
 setMenuOpen(false);
