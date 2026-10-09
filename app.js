@@ -13,15 +13,15 @@ const researchData = {
   regressionResults: [
     {
       id: "total",
-      label: { zh: "总样本", en: "Total" },
+      label: { zh: "总样本", en: "All respondents" },
       n: 90,
       r2: 0.598,
       interpretation: {
-        zh: "对 90 份消费者问卷进行五变量探索性拟合，用于观察样本内的变量关联。",
-        en: "An exploratory five-predictor fit examines associations within 90 consumer responses."
+        zh: "用 90 份消费者问卷中的五个变量做探索性回归，看看这些回答之间有哪些关联。",
+        en: "This exploratory regression uses five variables from 90 consumer questionnaires to look for relationships within the sample."
       },
       variables: [
-        reg("delta_score", "价格变化评分", "Delta score", 0.842),
+        reg("delta_score", "价格变化评分", "Price-change score", 0.842),
         reg("trust_score", "信任评分", "Trust score", -0.224),
         reg("price_priority", "价格优先度", "Price priority", -0.336),
         reg("space_cost", "空间成本", "Spatial cost", 0.189),
@@ -30,15 +30,15 @@ const researchData = {
     },
     {
       id: "elder",
-      label: { zh: "年长组", en: "Older Group" },
+      label: { zh: "年长组", en: "Older respondents" },
       n: 75,
       r2: 0.642,
       interpretation: {
-        zh: "年长组包含 75 份问卷。分组拟合用于提出后续研究问题，不代表对年龄效应的检验。",
-        en: "The older group contains 75 responses. This separate fit suggests questions for further study; it does not test an age effect."
+        zh: "年长组有 75 份问卷。单独分析这组回答，可以为后续研究提供线索，但这里没有检验年龄的影响。",
+        en: "The older group has 75 responses. Analyzing them separately can suggest questions for further research, but this model does not test the effect of age."
       },
       variables: [
-        reg("delta_score", "价格变化评分", "Delta score", 0.925),
+        reg("delta_score", "价格变化评分", "Price-change score", 0.925),
         reg("trust_score", "信任评分", "Trust score", -0.202),
         reg("price_priority", "价格优先度", "Price priority", -0.282),
         reg("space_cost", "空间成本", "Spatial cost", 0.171),
@@ -47,15 +47,15 @@ const researchData = {
     },
     {
       id: "young",
-      label: { zh: "年轻组", en: "Younger Group" },
+      label: { zh: "年轻组", en: "Younger respondents" },
       n: 15,
       r2: 0.482,
       interpretation: {
-        zh: "年轻组仅有 15 份问卷，估计容易受个别回答影响，不能据此推广到年轻消费者。",
-        en: "With only 15 responses, the younger-group estimates are sensitive to individual answers and cannot be generalized to younger consumers."
+        zh: "年轻组只有 15 份问卷，个别回答就可能明显影响估计结果，不能据此推断其他年轻消费者的情况。",
+        en: "The younger group has only 15 responses. Individual answers can strongly affect the estimates, so the results cannot be generalized to other younger consumers."
       },
       variables: [
-        reg("delta_score", "价格变化评分", "Delta score", 0.552),
+        reg("delta_score", "价格变化评分", "Price-change score", 0.552),
         reg("trust_score", "信任评分", "Trust score", -0.569),
         reg("price_priority", "价格优先度", "Price priority", -0.590),
         reg("space_cost", "空间成本", "Spatial cost", 0.154),
@@ -64,15 +64,15 @@ const researchData = {
     },
     {
       id: "lowedu",
-      label: { zh: "低教育组", en: "Lower Education" },
+      label: { zh: "低教育组", en: "Lower education" },
       n: 59,
       r2: 0.699,
       interpretation: {
-        zh: "较低教育组包含 59 份问卷。系数描述这一子样本内的关联，不用于判断教育程度的因果作用。",
-        en: "The lower-education group contains 59 responses. Its coefficients describe within-group associations, not causal effects of education."
+        zh: "较低教育组有 59 份问卷。这些系数反映组内变量之间的关联，不能说明教育程度如何影响选择。",
+        en: "This group has 59 responses from people with lower levels of education. The coefficients describe relationships within the group; they do not show how education affects choices."
       },
       variables: [
-        reg("delta_score", "价格变化评分", "Delta score", 1.113),
+        reg("delta_score", "价格变化评分", "Price-change score", 1.113),
         reg("trust_score", "信任评分", "Trust score", -0.412),
         reg("price_priority", "价格优先度", "Price priority", -0.201),
         reg("space_cost", "空间成本", "Spatial cost", 0.015),
@@ -81,15 +81,15 @@ const researchData = {
     },
     {
       id: "highedu",
-      label: { zh: "高教育组", en: "Higher Education" },
+      label: { zh: "高教育组", en: "Higher education" },
       n: 31,
       r2: 0.630,
       interpretation: {
-        zh: "较高教育组包含 31 份问卷。与其他组的差异仅作为探索线索，尚未进行正式的组间差异检验。",
-        en: "The higher-education group contains 31 responses. Differences from other groups remain exploratory; no formal between-group test is reported."
+        zh: "较高教育组有 31 份问卷。各组的系数虽有不同，但尚未检验这些差异是否具有统计意义。",
+        en: "This group has 31 responses from people with higher levels of education. Coefficients differ across groups, but those differences have not been tested for statistical significance."
       },
       variables: [
-        reg("delta_score", "价格变化评分", "Delta score", 0.783),
+        reg("delta_score", "价格变化评分", "Price-change score", 0.783),
         reg("trust_score", "信任评分", "Trust score", -0.245),
         reg("price_priority", "价格优先度", "Price priority", -0.484),
         reg("space_cost", "空间成本", "Spatial cost", 0.137),
@@ -105,88 +105,88 @@ function reg(key, zh, en, coef) {
 
 const articleGroups = [
   {
-    title: { zh: "模块A：消费者行为", en: "Module A: Consumer Behavior" },
+    title: { zh: "顾客怎么选", en: "How customers choose" },
     articles: [
       {
-        tag: { zh: "消费者", en: "Consumer" },
-        title: { zh: "价格敏感度", en: "Price Sensitivity" },
+        tag: { zh: "消费者", en: "Customers" },
+        title: { zh: "价格与选择", en: "Price and choice" },
         summary: {
-          zh: "问卷回答显示，受访者对摊贩低价和临时降价有较高认同。",
-          en: "Survey responses show agreement with choosing lower-priced vendors and reconsidering a purchase after a price cut."
+          zh: "受访者普遍表示，摊位价格更低或临时降价，会影响自己的选择。",
+          en: "Respondents generally said that lower stall prices or a sudden price cut would influence their choices."
         },
         detail: {
-          zh: "问卷分别询问了摊贩比商超便宜时的选择，以及摊位突然降价时是否改变计划。这些自述回答为理解价格比较提供了线索，不能直接等同于实际购买行为。",
-          en: "The questionnaire separately asks about choosing cheaper vendors over supermarkets and changing plans after a price cut. These self-reported responses offer clues about price comparison; they do not directly measure purchases."
+          zh: "问卷问了两种情况：摊位比商超便宜时会不会选择摊位，以及突然降价会不会改变购买计划。回答反映了受访者对价格的看法；要知道他们实际怎么买，还需要观察真实交易。",
+          en: "The survey asked whether people would choose a stall over a supermarket if it was cheaper, and whether a sudden price cut would change their plans. Their answers describe what they say they would do; actual purchases were not measured."
         },
         media: "xinjiang-bazaar"
       },
       {
-        tag: { zh: "消费者", en: "Consumer" },
-        title: { zh: "信任与服务偏好", en: "Trust & Service Preference" },
+        tag: { zh: "消费者", en: "Customers" },
+        title: { zh: "熟悉的摊主与服务", en: "Familiar vendors and service" },
         summary: {
-          zh: "部分受访者认可熟悉摊贩和良好服务，并表达接受略高价格的意愿。",
-          en: "Some respondents value familiar vendors and good service and report a willingness to accept slightly higher prices."
+          zh: "有些受访者愿意为熟悉的摊主和更好的服务多付一点钱。",
+          en: "Some respondents said they would pay a little more for a familiar vendor or better service."
         },
         detail: {
-          zh: "熟悉关系与服务体验是问卷中的独立观察维度。它们提示我们继续研究：顾客如何在价格、商品可靠性和与摊主的关系之间作出权衡。",
-          en: "Familiarity and service experience are distinct dimensions in the questionnaire. They invite further study of how customers weigh price, product reliability, and relationships with vendors."
+          zh: "问卷分别询问了熟悉摊主和服务体验。这留下一个值得继续追问的问题：顾客选摊位时，价格、对商品的放心程度，以及和摊主的关系，各有多大分量？",
+          en: "Familiarity and service were asked about separately. A question for further study is how customers weigh price, confidence in the goods, and their relationship with the vendor."
         },
         media: "xinjiang-questionnaire"
       },
       {
-        tag: { zh: "消费者", en: "Consumer" },
-        title: { zh: "空间选择与比较", en: "Spatial Choice & Search" },
+        tag: { zh: "消费者", en: "Customers" },
+        title: { zh: "摊位之间的比较", en: "Comparing stalls" },
         summary: {
-          zh: "受访者较为认同比较不同摊位后再购买。",
-          en: "Respondents tend to agree with comparing several stalls before purchasing."
+          zh: "受访者倾向于先比较几家摊位，再决定买哪一家。",
+          en: "Respondents tended to favour comparing a few stalls before deciding where to buy."
         },
         detail: {
-          zh: "问卷将入口便利、为低价多走路和比较多家摊位分开提问。这些回答支持把空间与搜索作为研究维度，但尚不足以判断空间成本是否被其他体验抵消。",
-          en: "The questionnaire treats entrance convenience, walking farther for a lower price, and comparing stalls as separate questions. These responses support studying space and search, without establishing whether other experiences offset spatial costs."
+          zh: "离入口近是否方便、愿不愿为低价多走几步、会不会比较多家摊位，问卷分别问了这些问题。回答说明距离和比较过程值得研究，但还不能判断，其他购物体验是否足以抵消多走路的成本。",
+          en: "The survey asked separately about stalls near the entrance, walking farther for a lower price, and comparing vendors. These answers make distance and search worth examining, but do not tell us whether other parts of the shopping experience make up for the extra walk."
         },
         media: "suzhou"
       }
     ]
   },
   {
-    title: { zh: "模块B：商户策略", en: "Module B: Merchant Strategies" },
+    title: { zh: "摊主怎么做", en: "How vendors respond" },
     articles: [
       {
-        tag: { zh: "商户", en: "Merchant" },
-        title: { zh: "价格灵活性", en: "Price Flexibility" },
+        tag: { zh: "商户", en: "Vendors" },
+        title: { zh: "摊主如何定价", en: "How vendors set prices" },
         summary: {
-          zh: "商户问卷呈现出关注同行价格和调整价格的倾向。",
-          en: "Merchant responses indicate attention to competitors’ prices and a tendency to adjust their own prices."
+          zh: "受访摊主在问卷中表示，会留意同行的价格，也倾向于随之调整自己的报价。",
+          en: "Vendors said they watch competitors’ prices and tend to adjust their own."
         },
         detail: {
-          zh: "问卷关注商户对价格变化的反应、跟随降价的倾向，以及坚持既定价格的程度。这些回答描述了受访商户的定价态度，尚未直接测量策略带来的利润。",
-          en: "The questionnaire asks about responses to price changes, following price cuts, and maintaining an existing price. These responses describe pricing attitudes; they do not directly measure the profits from a strategy."
+          zh: "别家改价时如何应对、要不要跟着降价、是否坚持原价，是问卷中的几个问题。回答让我们了解摊主如何考虑定价，但调查没有直接测量这些做法带来的利润。",
+          en: "The questions covered reacting to other vendors’ price changes, matching a price cut, and holding a price steady. The answers describe how vendors think about pricing; the survey did not measure how these decisions affected profit."
         },
         media: "xinjiang-producer"
       },
       {
-        tag: { zh: "商户", en: "Merchant" },
-        title: { zh: "空间敏感性 & 摊位布局", en: "Spatial Sensitivity & Location" },
+        tag: { zh: "商户", en: "Vendors" },
+        title: { zh: "摊位位置", en: "Stall location" },
         summary: {
-          zh: "商户问卷对摊位位置和空间竞争表现出较高关注。",
-          en: "Merchant responses show considerable attention to stall location and competition for space."
+          zh: "受访摊主很在意摊位设在哪里，以及周围摊位带来的竞争。",
+          en: "Vendors placed importance on their stall’s location and competition for space."
         },
         detail: {
-          zh: "商户对位置与销量的关系、空间竞争和角落位置的潜在劣势表达了看法。这里呈现的是经营者的感知，不能据此推断具体位置带来的销售或利润变化。",
-          en: "Merchants report their views on location and sales, spatial competition, and possible disadvantages of a corner stall. These are operators’ perceptions, not measured changes in sales or profit caused by location."
+          zh: "位置是否影响销量、摊位之间如何争夺空间、角落位置是否吃亏，都是摊主回答的问题。这些是他们的经营感受，不能直接用来计算换一个位置会增加多少销量或利润。",
+          en: "Vendors were asked how location relates to sales, how stalls compete for space, and whether a corner stall is at a disadvantage. These are their views, rather than measurements of how a different location would change sales or profit."
         },
         media: "chongqing"
       },
       {
-        tag: { zh: "综合机制", en: "Integrated Mechanism" },
-        title: { zh: "多维竞争机制", en: "Multidimensional Competition" },
+        tag: { zh: "放在一起看", en: "Putting it together" },
+        title: { zh: "价格、信任与距离", en: "Price, trust and distance" },
         summary: {
-          zh: "项目以价格、信任与空间三个维度理解市集中的选择。",
-          en: "The project examines market choices through three dimensions: price, trust, and space."
+          zh: "选择哪家摊位，可能同时牵涉价格、信任和距离。",
+          en: "Choosing a stall may involve price, trust, and distance at the same time."
         },
         detail: {
-          zh: "价格比较、熟悉关系和摊位搜索为观察市集提供了相互关联的视角。项目结合问卷与影像提出这些研究问题，后续仍需更清晰的测量设计和更多样本来检验机制。",
-          en: "Price comparison, familiar relationships, and stall search offer connected perspectives on markets. The project uses questionnaires and images to frame these questions; clearer measurement and further samples are needed to test the mechanisms."
+          zh: "问卷和现场照片把几个问题放到了一起：人们怎样比价，会不会选择熟悉的摊主，又愿意走多远去找另一家。要弄清它们如何相互影响，还需要更多样本和更细致的测量。",
+          en: "The questionnaires and photographs bring together questions about comparing prices, choosing familiar vendors, and walking to another stall. More responses and better-defined measures are still needed to establish how these factors interact."
         },
         media: "xinjiang-bazaar"
       }
@@ -196,13 +196,31 @@ const articleGroups = [
 
 const mediaGroups = [
   {
+    id: "xinjiang-bazaar",
+    title: { zh: "新疆市集", en: "Xinjiang markets" },
+    article: { zh: "相关主题：价格与选择 / 价格、信任与距离", en: "Related topics: price and choice; price, trust and distance" },
+    items: ["bazzar-1.jpg", "bazzar-2.jpg", "bazzar-3.jpg", "bazzar-4.jpg", "bazzar-5.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
+  },
+  {
+    id: "xinjiang-producer",
+    title: { zh: "新疆摊主", en: "Vendors in Xinjiang" },
+    article: { zh: "相关主题：摊主如何定价", en: "Related topic: how vendors set prices" },
+    items: ["people-producer.jpg", "people-producer-8.jpg", "people-producer-7.jpg", "people-producer-6.jpg", "people-producer-5.jpg", "People-producer-4.jpg", "People-Producer-3.jpg", "People-producer-2.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
+  },
+  {
+    id: "xinjiang-questionnaire",
+    title: { zh: "新疆问卷调查", en: "Survey work in Xinjiang" },
+    article: { zh: "相关主题：熟悉的摊主与服务", en: "Related topic: familiar vendors and service" },
+    items: ["People-questionnaire-1.jpg", "people-questionnaire-2.jpg", "People-questionnaire-3.jpg", "people-questionnaire-4.jpg", "people-questonnaire-5.jpg", "people-questionnaire-6.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
+  },
+  {
   "id": "xinjiang-return",
   "title": {
     "zh": "重返新疆",
     "en": "Returning to Xinjiang"
   },
   "article": {
-    "zh": "成果分享 · 与摊主一起翻阅研究手册",
+    "zh": "和摊主一起看研究手册",
     "en": "Sharing the research booklet with market vendors"
   },
   "items": [
@@ -212,12 +230,12 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "翻开手册，也打开一段对话。",
-        "en": "Sharing the booklet and a conversation."
+        "zh": "和两位摊主一起看手册。",
+        "en": "Looking through the booklet with two vendors."
       },
       "alt": {
         "zh": "徐玮晨与两位摊主微笑着交流，手中展开研究手册",
-        "en": "Weichen Xu shares an open booklet and a conversation with two smiling vendors"
+        "en": "Weichen Xu and two vendors smile as they look through the research booklet"
       }
     },
     {
@@ -226,8 +244,8 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "摊位前的交流瞬间。",
-        "en": "A moment of conversation at the market."
+        "zh": "和摊主聊聊手册里的内容。",
+        "en": "Talking about the booklet with a vendor."
       },
       "alt": {
         "zh": "徐玮晨拿着研究手册与一位坐在摊位前的摊主交流",
@@ -240,8 +258,8 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "坐在鞋摊旁，继续交流。",
-        "en": "Continuing the conversation beside a shoe stall."
+        "zh": "坐在鞋摊旁聊天。",
+        "en": "A conversation beside the shoe stall."
       },
       "alt": {
         "zh": "徐玮晨拿着手册坐在鞋摊旁，与摊位上的人交流",
@@ -254,7 +272,7 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "在服装摊前，分享研究手册。",
+        "zh": "在服装摊前介绍研究手册。",
         "en": "Sharing the booklet at a clothing stall."
       },
       "alt": {
@@ -268,7 +286,7 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "饮品摊旁的共同阅读。",
+        "zh": "在饮品摊旁一起看手册。",
         "en": "Reading together beside a drinks stall."
       },
       "alt": {
@@ -282,8 +300,8 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "带回市集的研究手册。",
-        "en": "The research booklet, back at the market."
+        "zh": "这次带回市集的手册。",
+        "en": "The booklet I brought back to the market."
       },
       "alt": {
         "zh": "徐玮晨手持《超越价格：集市里的经济学》手册与一杯饮品",
@@ -296,7 +314,7 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "蔬菜摊前的回访。",
+        "zh": "回到蔬菜摊。",
         "en": "A return visit to a vegetable stall."
       },
       "alt": {
@@ -310,7 +328,7 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "与服装摊主一起翻阅。",
+        "zh": "和服装摊主一起翻手册。",
         "en": "Looking through the booklet with a clothing vendor."
       },
       "alt": {
@@ -324,8 +342,8 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "在一页页内容中展开交流。",
-        "en": "Talking through the booklet, page by page."
+        "zh": "一起看手册里的照片和文字。",
+        "en": "Looking through the photos and text together."
       },
       "alt": {
         "zh": "徐玮晨与一位戴黑色帽子的摊主一起翻阅研究手册",
@@ -338,8 +356,8 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "带着研究手册，在市集合影。",
-        "en": "A photograph together with the research booklet."
+        "zh": "拿着手册和摊主合影。",
+        "en": "A photo with a vendor and the booklet."
       },
       "alt": {
         "zh": "徐玮晨手持研究手册，与一位摊主在市集遮阳棚下合影",
@@ -352,8 +370,8 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "在食品摊前翻开研究手册。",
-        "en": "Opening the research booklet at a food stall."
+        "zh": "在食品摊前一起看手册。",
+        "en": "Reading the booklet together at a food stall."
       },
       "alt": {
         "zh": "徐玮晨与一位坐在食品摊前的摊主一起看研究手册",
@@ -377,33 +395,15 @@ const mediaGroups = [
   ]
 },
   {
-    id: "xinjiang-bazaar",
-    title: { zh: "新疆市集总览", en: "Xinjiang Bazaar Overview" },
-    article: { zh: "关联：价格敏感度 / 多维竞争机制", en: "Linked: Price Sensitivity / Multidimensional Competition" },
-    items: ["bazzar-1.jpg", "bazzar-2.jpg", "bazzar-3.jpg", "bazzar-4.jpg", "bazzar-5.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
-  },
-  {
-    id: "xinjiang-producer",
-    title: { zh: "新疆生产者", en: "Xinjiang Producers" },
-    article: { zh: "关联：价格灵活性", en: "Linked: Price Flexibility" },
-    items: ["people-producer.jpg", "people-producer-8.jpg", "people-producer-7.jpg", "people-producer-6.jpg", "people-producer-5.jpg", "People-producer-4.jpg", "People-Producer-3.jpg", "People-producer-2.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
-  },
-  {
-    id: "xinjiang-questionnaire",
-    title: { zh: "新疆问卷现场", en: "Xinjiang Questionnaire Fieldwork" },
-    article: { zh: "关联：信任与服务偏好", en: "Linked: Trust & Service Preference" },
-    items: ["People-questionnaire-1.jpg", "people-questionnaire-2.jpg", "People-questionnaire-3.jpg", "people-questionnaire-4.jpg", "people-questonnaire-5.jpg", "people-questionnaire-6.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
-  },
-  {
     id: "suzhou",
-    title: { zh: "苏州市集", en: "Suzhou Markets" },
-    article: { zh: "关联：空间选择与比较", en: "Linked: Spatial Choice & Search" },
+    title: { zh: "苏州市集", en: "Suzhou markets" },
+    article: { zh: "相关主题：摊位之间的比较", en: "Related topic: comparing stalls" },
     items: Array.from({ length: 10 }, (_, i) => item(`suzhou/suzhou-${i + 1}.jpg`, "image"))
   },
   {
     id: "chongqing",
-    title: { zh: "重庆市集", en: "Chongqing Markets" },
-    article: { zh: "关联：空间敏感性 & 摊位布局", en: "Linked: Spatial Sensitivity & Location" },
+    title: { zh: "重庆市集", en: "Chongqing markets" },
+    article: { zh: "相关主题：摊位位置", en: "Related topic: stall location" },
     items: Array.from({ length: 9 }, (_, i) => item(`chongqing/chongqing-product-${i + 1}.jpg`, "image"))
   }
 ];
@@ -435,10 +435,10 @@ function applyLanguage() {
   const languageButton = document.getElementById("langToggle");
   languageButton.textContent = state.lang === "zh" ? "EN" : "中";
   languageButton.setAttribute("aria-label", state.lang === "zh" ? "Switch to English" : "切换为中文");
-  document.getElementById("prevMedia").setAttribute("aria-label", state.lang === "zh" ? "上一张影像" : "Previous image");
-  document.getElementById("nextMedia").setAttribute("aria-label", state.lang === "zh" ? "下一张影像" : "Next image");
-  document.getElementById("closeLightbox").setAttribute("aria-label", state.lang === "zh" ? "关闭影像预览" : "Close image preview");
-  document.getElementById("lightbox").setAttribute("aria-label", state.lang === "zh" ? "影像预览" : "Image preview");
+  document.getElementById("prevMedia").setAttribute("aria-label", state.lang === "zh" ? "上一张照片" : "Previous photo");
+  document.getElementById("nextMedia").setAttribute("aria-label", state.lang === "zh" ? "下一张照片" : "Next photo");
+  document.getElementById("closeLightbox").setAttribute("aria-label", state.lang === "zh" ? "关闭照片" : "Close photo");
+  document.getElementById("lightbox").setAttribute("aria-label", state.lang === "zh" ? "查看照片" : "Photo viewer");
   updateThemeLabel();
   updateMenuLabel();
   renderArticles();
@@ -465,7 +465,7 @@ function renderArticles() {
           <button class="article-toggle" type="button" data-article="${key}" aria-expanded="${expanded}" aria-controls="article-detail-${key}">${articleToggleLabel(expanded)}</button>
           <div class="article-detail" id="article-detail-${key}"${expanded ? "" : " hidden"}>
             <p>${t(article.detail)}</p>
-            <a class="article-toggle jump-media" href="#media" data-media="${article.media}">${state.lang === "zh" ? "查看关联影像" : "View Linked Media"}</a>
+            <a class="article-toggle jump-media" href="#media" data-media="${article.media}">${state.lang === "zh" ? "看相关照片" : "See related photos"}</a>
           </div>
         </article>
       `; }).join("")}
@@ -492,8 +492,8 @@ function renderArticles() {
 }
 
 function articleToggleLabel(expanded) {
-  if (state.lang === "zh") return expanded ? "收起文章" : "展开文章";
-  return expanded ? "Read Less" : "Read More";
+  if (state.lang === "zh") return expanded ? "收起" : "继续阅读";
+  return expanded ? "Show less" : "Read more";
 }
 
 function currentMediaGroup() {
@@ -546,14 +546,14 @@ function renderFeaturedMedia() {
   const status = document.getElementById("mediaStatus");
   if (status) status.textContent = state.lang === "zh"
     ? `${t(group.title)}，第 ${state.activeIndex + 1} 张，共 ${group.items.length} 张`
-    : `${t(group.title)}, image ${state.activeIndex + 1} of ${group.items.length}`;
+    : `${t(group.title)}, photo ${state.activeIndex + 1} of ${group.items.length}`;
 }
 
 function renderMediaGrid() {
   const group = currentMediaGroup();
   const root = document.getElementById("mediaGrid");
   root.innerHTML = group.items.map((media, index) => `
-    <button class="media-card" type="button" data-index="${index}" aria-label="${escapeHtml(t(media.caption || group.title))} · ${index + 1}${state.lang === "zh" ? "，打开影像" : ", open image"}">
+    <button class="media-card" type="button" data-index="${index}" aria-label="${escapeHtml(t(media.caption || group.title))} · ${index + 1}${state.lang === "zh" ? "，放大照片" : ", enlarge photo"}">
       ${mediaElement(media, "")}
       <span class="caption">${t(group.title)} · ${index + 1}</span>
     </button>
@@ -602,7 +602,7 @@ async function loadSurveyData() {
   surveyLoadFailed = false;
   renderChart();
   try {
-    const response = await fetch("data/verified-survey-summary.json");
+    const response = await fetch("data/verified-survey-summary.json?v=20261009-copy");
     if (!response.ok) throw new Error("Questionnaire summary unavailable");
     const data = await response.json();
     if (!data.groups?.every(group => group.items?.length)) throw new Error("Invalid questionnaire summary");
@@ -622,8 +622,8 @@ function renderChart() {
   });
   if (!surveyData) {
     root.innerHTML = `<p class="survey-view-note">${surveyLoadFailed
-      ? surveyCopy("问卷汇总暂未载入。", "The questionnaire summary could not be loaded.")
-      : surveyCopy("正在载入问卷汇总…", "Loading questionnaire summaries…")}</p>${surveyLoadFailed ? `<button type="button" class="chart-btn" id="retrySurvey">${surveyCopy("重新载入", "Try again")}</button>` : ""}`;
+      ? surveyCopy("问卷数据暂时无法加载。", "The survey data could not be loaded.")
+      : surveyCopy("正在加载问卷数据…", "Loading survey data…")}</p>${surveyLoadFailed ? `<button type="button" class="chart-btn" id="retrySurvey">${surveyCopy("重试", "Try again")}</button>` : ""}`;
     document.getElementById("retrySurvey")?.addEventListener("click", loadSurveyData);
     return;
   }
@@ -634,20 +634,20 @@ function renderChart() {
     { distribution: "Distribution", agreement: "Agreement", table: "Table" }[state.chart]
   );
   const note = state.chart === "distribution"
-    ? surveyCopy("每条代表一道题，展示有效回答在 1–5 分之间的分布。图上标题为题意摘要。", "Each bar shows one item's valid responses on the 1–5 scale. Chart titles summarize the items.")
+    ? surveyCopy("每条横条对应一道题，显示有效回答中选择 1–5 分的人数比例。题目旁的文字是题意摘要。", "Each bar shows how valid answers to one question are spread across scores 1–5. The labels are shortened versions of the questions.")
     : state.chart === "agreement"
-      ? surveyCopy("认同比例 = 选择 4 或 5 的人数 ÷ 该题有效回答数。保留原题方向，按问卷模块排列。", "Agreement = responses of 4 or 5 divided by valid responses for that item. Original directions and questionnaire modules are retained.")
-      : surveyCopy("每格显示人数与占该题有效回答的比例。窄屏可横向滑动表格。", "Each cell shows a count and its share of valid responses. Scroll the table horizontally on narrow screens.");
+      ? surveyCopy("认同比例 = 选择 4 或 5 的人数 ÷ 该题有效回答数。题目按问卷模块排列，保留原题的正反方向。", "Agreement is the percentage of valid responses scored 4 or 5. Questions are grouped by questionnaire section, with no reverse scoring.")
+      : surveyCopy("每格列出人数和占该题有效回答的比例。屏幕较窄时，可以左右滑动表格。", "Each cell gives the number of responses and their percentage of valid answers to that question. Scroll sideways to see the full table on a small screen.");
   const legend = state.chart !== "agreement" ? `<ul class="survey-legend" aria-label="${surveyCopy("五级量表", "Five-point scale")}">${[1, 2, 3, 4, 5].map(score => `<li><i style="background:var(--score-${score})" aria-hidden="true"></i><span>${score}${score === 1 ? ` · ${t(surveyData.scale.endpoints[1])}` : score === 5 ? ` · ${t(surveyData.scale.endpoints[5])}` : ""}</span></li>`).join("")}</ul>` : "";
   const themes = [...new Set(group.items.map(item => item.theme))];
   const chart = state.chart === "table" ? renderSurveyTable(group) : themes.map(theme => `<section class="survey-dimension" aria-label="${t(surveyThemes[theme])}"><h4>${t(surveyThemes[theme])}</h4>${group.items.filter(item => item.theme === theme).map(renderSurveyRow).join("")}</section>`).join("");
   const invalidItems = group.items.filter(item => item.invalid_n || item.missing_n);
   const invalidNote = invalidItems.map(item => surveyCopy(
-    `${item.code}：${item.invalid_n} 条编码超出 1–5 范围${item.missing_n ? `，${item.missing_n} 条缺失` : ""}，不计入此题比例；有效 n = ${item.valid_n}。`,
-    `${item.code}: ${item.invalid_n} out-of-range code(s)${item.missing_n ? ` and ${item.missing_n} missing response(s)` : ""} excluded from this item; valid n = ${item.valid_n}.`
+    `${item.code}：${item.invalid_n} 个回答的编码不在 1–5 之间${item.missing_n ? `，另有 ${item.missing_n} 个回答缺失` : ""}，已从本题统计中排除。有效回答数 n = ${item.valid_n}。`,
+    `${item.code}: ${item.invalid_n} answers with codes outside 1–5${item.missing_n ? ` and ${item.missing_n} missing answers` : ""} were excluded. Valid responses: n = ${item.valid_n}.`
   )).join(" ");
   root.innerHTML = `<p class="survey-view-note">${note}</p>${legend}${chart}
-    <p class="survey-footnote">${invalidNote ? `${invalidNote}<br>` : ""}${surveyCopy(`本组展示 ${group.items.length} 道选定题。均为样本内自陈回答，各题独立统计；不合成为维度分数。`, `${group.items.length} selected items from this group. These are self-reported answers within the sample; items are summarized separately, without composite dimension scores.`)}</p>
+    <p class="survey-footnote">${invalidNote ? `${invalidNote}<br>` : ""}${surveyCopy(`这里选取本组的 ${group.items.length} 道题，反映受访者自己报告的看法。每题单独统计，没有合并成主题总分，结果仅限于本次样本。`, `These ${group.items.length} selected questions reflect what respondents reported in this sample. Each question is summarized separately; answers have not been combined into scores for each theme.`)}</p>
     ${renderSurveySources(group, sourceOpen)}`;
   document.getElementById("surveyStatus").textContent = `${t(group.label)} · ${viewLabel} · ${group.items.length} ${surveyCopy("题", "items")}`;
 }
@@ -671,12 +671,12 @@ function renderSurveyTable(group) {
 
 function renderSurveySources(group, open) {
   const auditNotes = surveyData.audit_notes.filter(note => (note.item_id || note.item_ids?.[0] || "").startsWith(group.id));
-  return `<details class="survey-source"${open ? " open" : ""}><summary>${surveyCopy("题目、来源与计算说明", "Items, sources & calculation notes")}</summary><div class="survey-source-body">
+  return `<details class="survey-source"${open ? " open" : ""}><summary>${surveyCopy("查看题目、来源和计算方法", "Questions, sources and calculations")}</summary><div class="survey-source-body">
     <p>${surveyCopy("数据来源", "Data source")}: ${escapeHtml(group.source.workbook)} · ${group.source.sheet} · ${group.source.response_range}</p>
-    <p>${surveyCopy("每题仅纳入 1–5 的整数编码。认同比例为 4、5 两档合计除以有效回答数；均值按原始编码计算。未反向计分，未加权。商户表末尾均值行不计为答卷。百分比四舍五入后相加可能不等于 100%。", "Only integer codes from 1 to 5 are included per item. Agreement combines scores 4 and 5; means use the original codes. No reverse coding or weighting is applied. The merchant worksheet's final average row is excluded. Rounded percentages may not sum to 100%.")}</p>
-    <ol>${group.items.map(item => `<li><strong>${item.code} · ${escapeHtml(item.question[`text_${state.lang}`])}</strong><br>${escapeHtml(item.direction[`higher_score_means_${state.lang}`])}<small>${item.question.wording_status.startsWith("item_summary") ? surveyCopy("题意摘要；材料未提供可核对的完整原题。", "Item summary; complete original wording was not available for verification.") : surveyCopy("中文陈述见分析材料；英文为译文。", "Chinese statement from the analysis materials; English is a translation.")}<br>${escapeHtml(item.question.source_document)}<br>${surveyCopy("数据位置", "Data range")}: ${item.source.sheet} · ${item.source.data_range}</small></li>`).join("")}</ol>
+    <p>${surveyCopy("每题只统计编码为 1–5 整数的回答。认同比例是选择 4 或 5 的人数占有效回答数的比例；均值按原始编码计算，不反向计分，也不加权。商户工作表最后一行是均值，不算一份答卷。百分比经过四舍五入，合计可能不正好是 100%。", "For each question, only whole-number codes from 1 to 5 are counted. Agreement is the share of valid answers scored 4 or 5. Means use the original codes, with no reverse scoring or weighting. The final row of the merchant worksheet is an average, so it is not counted as a response. Rounded percentages may not add up to 100%.")}</p>
+    <ol>${group.items.map(item => `<li><strong>${item.code} · ${escapeHtml(item.question[`text_${state.lang}`])}</strong><br>${escapeHtml(item.direction[`higher_score_means_${state.lang}`])}<small>${item.question.wording_status.startsWith("item_summary") ? surveyCopy("这里是题意摘要，现有材料中没有可核对的完整原题。", "This is a summary; the complete original question was not available to check.") : surveyCopy("中文题目来自分析材料，英文为译文。", "The Chinese wording comes from the analysis materials; the English is a translation.")}<br>${escapeHtml(item.question.source_document)}<br>${surveyCopy("数据位置", "Data range")}: ${item.source.sheet} · ${item.source.data_range}</small></li>`).join("")}</ol>
     ${auditNotes.map(note => `<p>${escapeHtml(t(note.text))}</p>`).join("")}
-    <a href="data/verified-survey-summary.json" download="verified-survey-summary.json">${surveyCopy("下载问卷汇总数据 ↓", "Download aggregate data ↓")}</a>
+    <a href="data/verified-survey-summary.json" download="verified-survey-summary.json">${surveyCopy("下载问卷汇总数据 ↓", "Download the survey summary ↓")}</a>
     </div></details>`;
 }
 
@@ -701,7 +701,7 @@ function renderRegression() {
     <div><span>N</span><strong>${model.n}</strong></div>
     <div><span>${state.lang === "zh" ? "样本拟合 R²" : "In-sample R²"}</span><strong>${model.r2.toFixed(3)}</strong></div>
     <p>${t(model.interpretation)}</p>
-    <p class="regression-limitation">${state.lang === "zh" ? "方法说明：依据现有回归数据表，以五个变量进行探索性 OLS 拟合。价格评分与选择倾向包含同一道问卷题，存在测量重叠；系数与 R² 不应解释为独立或因果证据。" : "Method: exploratory OLS with five predictors, derived from the supplied regression workbook. The price score and choice outcome share a questionnaire item; coefficients and R² are not independent or causal evidence."}</p>
+    <p class="regression-limitation">${state.lang === "zh" ? "这里根据回归工作表做了五变量 OLS 探索性回归。价格评分和选择倾向用到了同一道问卷题，测量内容有重叠，因此系数和 R² 不能作为独立证据，也不能用于判断因果关系。" : "This exploratory OLS model uses five predictors from the regression workbook. The price score and the choice measure share a survey question. Because of this overlap, the coefficients and R² should not be treated as independent evidence or used to draw causal conclusions."}</p>
   `;
 
   table.innerHTML = `
