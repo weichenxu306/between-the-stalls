@@ -131,8 +131,13 @@ html:not([data-theme="dark"]) .chapter-track i {
   background: color-mix(in srgb, var(--accent), #daeb9c calc(var(--scene-0) * 100%));
 }
 
-html:not([data-theme="dark"]) .story-skip {
-  color: color-mix(in srgb, var(--ink), #eeeee4 calc(var(--scene-0) * 100%));
+html:not([data-theme="dark"]) .story-scene:not(.scene-opening) .story-next .arrow-circle {
+  border-color: var(--accent);
+}
+
+html:not([data-theme="dark"]) .story-scene:not(.scene-opening) .story-next:is(:hover, :focus-visible) .arrow-circle {
+  background: var(--accent);
+  color: var(--surface);
 }
 
 html.is-reduced-motion:not([data-theme="dark"]) :is(.scene-question, .scene-perspective, .scene-framework),

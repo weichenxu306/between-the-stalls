@@ -151,6 +151,29 @@ html[data-theme=dark]{--paper:#1c2620;--surface:#222f27;--surface-soft:#2a372e;-
  .researcher-portrait figcaption{font-size:8px;margin-top:12px}
 }
 
+/* One consistent next step per scene; only the final arrow leaves the story. */
+.story-next{position:absolute;right:var(--gutter);bottom:calc(5% + 15px);gap:18px;min-height:48px;width:max-content;max-width:calc(100% - var(--gutter)*2);white-space:nowrap}
+.story-next .arrow-circle{width:48px;height:48px;flex-shrink:0}
+.story-next:focus-visible .arrow-circle{background:var(--lime);color:var(--night)}
+@media(min-width:769px) and (max-width:1200px){
+ .story-chapters{left:var(--gutter);right:calc(var(--gutter) + 250px);width:auto;transform:none;justify-content:space-between;gap:10px}
+ .story-chapters button{gap:5px;font-size:9px}
+ .hero-credit{bottom:14%}
+}
+@media(max-width:768px){
+ .story-chapters{left:var(--gutter);right:calc(var(--gutter) + 60px);width:auto;transform:none}
+ .story-next{bottom:calc(4% + 10px);min-height:44px;max-width:44px}
+ .story-next .arrow-circle{width:44px;height:44px;font-size:20px}
+ html.js:not(.is-reduced-motion) .story-next-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+}
+.is-reduced-motion .scene-question .story-next,html:not(.js) .scene-question .story-next,
+.is-reduced-motion .scene-perspective .story-next,html:not(.js) .scene-perspective .story-next{position:static;grid-column:1/-1;justify-self:end;margin:32px 0 0 auto;max-width:100%}
+.is-reduced-motion .scene-framework .story-next,html:not(.js) .scene-framework .story-next{bottom:14%;max-width:100%}
+@media(max-width:768px){
+ .is-reduced-motion .scene-opening .story-next,html:not(.js) .scene-opening .story-next{bottom:20%;max-width:100%}
+ .is-reduced-motion .scene-framework .story-next,html:not(.js) .scene-framework .story-next{position:static;margin:32px 0 0 auto}
+}
+
 /* Return visit: a photo essay that brings the inquiry back to its participants. */
 .return-visit { padding-bottom: 76px; }
 .return-heading { display: grid; grid-template-columns: 1.4fr 1fr; gap: 9%; align-items: end; margin: 68px 0 54px; }

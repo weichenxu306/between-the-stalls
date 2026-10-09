@@ -49,6 +49,7 @@
 
     function setChapterState(active) {
       chapterButtons.forEach(button => {
+        if (!button.closest(".story-chapters")) return;
         const selected = Number(button.dataset.storyJump) === active;
         button.classList.toggle("is-active", selected);
         if (button.tagName === "BUTTON") button.setAttribute("aria-pressed", String(selected));
