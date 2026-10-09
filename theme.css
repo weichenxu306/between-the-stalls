@@ -32,9 +32,20 @@ html:not([data-theme="dark"]) .skip-link {
 }
 
 html:not([data-theme="dark"]) .site-header {
-  background: linear-gradient(#e9dfcef5, #e9dfcee8);
+  --muted: #273c32;
+  --accent: #20352a;
+  background: #e9dfce;
   color: var(--ink);
-  border-bottom-color: var(--line);
+  border-bottom-color: #273c3224;
+  box-shadow: inset 0 -1px 0 #ffffff38;
+}
+
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  html:not([data-theme="dark"]) .site-header {
+    background: linear-gradient(rgba(233, 223, 206, .82), rgba(233, 223, 206, .74));
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    backdrop-filter: blur(20px) saturate(140%);
+  }
 }
 
 html:not([data-theme="dark"]) :is(.brand small, .motion-toggle) {

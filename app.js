@@ -207,34 +207,6 @@ const mediaGroups = [
   },
   "items": [
     {
-      "src": "assets/xinjiang-return-01.jpg",
-      "type": "image",
-      "width": 1706,
-      "height": 1279,
-      "caption": {
-        "zh": "在摊位旁，一起翻阅研究手册。",
-        "en": "Looking through the research booklet beside a stall."
-      },
-      "alt": {
-        "zh": "徐玮晨与一位摊主在服装摊旁共同翻阅研究手册",
-        "en": "Weichen Xu and a vendor look through the research booklet beside a clothing stall"
-      }
-    },
-    {
-      "src": "assets/xinjiang-return-02.jpg",
-      "type": "image",
-      "width": 1706,
-      "height": 1279,
-      "caption": {
-        "zh": "摊主翻阅研究手册。",
-        "en": "A vendor reads the research booklet."
-      },
-      "alt": {
-        "zh": "一位摊主站在服装摊前阅读打开的研究手册",
-        "en": "A vendor reads the open research booklet at his clothing stall"
-      }
-    },
-    {
       "src": "assets/xinjiang-return-03.jpg",
       "type": "image",
       "width": 1706,
