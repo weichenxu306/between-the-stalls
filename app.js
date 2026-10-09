@@ -366,12 +366,12 @@ const mediaGroups = [
       "width": 1706,
       "height": 1279,
       "caption": {
-        "zh": "市集里的面对面交流。",
-        "en": "A face-to-face conversation at the market."
+        "zh": "接受采访",
+        "en": "Being interviewed at the market."
       },
       "alt": {
-        "zh": "徐玮晨手持研究手册，与一位拿着手机的人在市集遮阳棚下交流",
-        "en": "Weichen Xu holds the research booklet while talking with a person holding a phone under a market canopy"
+        "zh": "徐玮晨在市集接受采访，手中拿着研究手册",
+        "en": "Weichen Xu being interviewed at the market while holding the research booklet"
       }
     }
   ]
