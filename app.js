@@ -197,7 +197,7 @@ const articleGroups = [
 const mediaGroups = [
   {
     id: "xinjiang-bazaar",
-    title: { zh: "新疆市集", en: "Xinjiang markets" },
+    title: { zh: "新疆市集", en: "Xinjiang bazaars" },
     article: { zh: "相关主题：价格与选择 / 价格、信任与距离", en: "Related topics: price and choice; price, trust and distance" },
     items: ["bazzar-1.jpg", "bazzar-2.jpg", "bazzar-3.jpg", "bazzar-4.jpg", "bazzar-5.jpg"].map(file => item(`xinjiangbazaar/${file}`, "image"))
   },
@@ -221,7 +221,7 @@ const mediaGroups = [
   },
   "article": {
     "zh": "和摊主一起看研究手册",
-    "en": "Sharing the research booklet with market vendors"
+    "en": "Sharing the research booklet with bazaar vendors"
   },
   "items": [
     {
@@ -301,7 +301,7 @@ const mediaGroups = [
       "height": 1279,
       "caption": {
         "zh": "这次带回市集的手册。",
-        "en": "The booklet I brought back to the market."
+        "en": "The booklet I brought back to the bazaar."
       },
       "alt": {
         "zh": "徐玮晨手持《超越价格：集市里的经济学》手册与一杯饮品",
@@ -361,7 +361,7 @@ const mediaGroups = [
       },
       "alt": {
         "zh": "徐玮晨手持研究手册，与一位摊主在市集遮阳棚下合影",
-        "en": "Weichen Xu holds the research booklet for a photograph with a vendor under a market canopy"
+        "en": "Weichen Xu holds the research booklet for a photograph with a vendor under a bazaar canopy"
       }
     },
     {
@@ -385,11 +385,11 @@ const mediaGroups = [
       "height": 1279,
       "caption": {
         "zh": "接受采访",
-        "en": "Being interviewed at the market."
+        "en": "Being interviewed at the bazaar."
       },
       "alt": {
         "zh": "徐玮晨在市集接受采访，手中拿着研究手册",
-        "en": "Weichen Xu being interviewed at the market while holding the research booklet"
+        "en": "Weichen Xu being interviewed at the bazaar while holding the research booklet"
       }
     }
   ]
@@ -602,7 +602,7 @@ async function loadSurveyData() {
   surveyLoadFailed = false;
   renderChart();
   try {
-    const response = await fetch("data/verified-survey-summary.json?v=20261009-copy");
+    const response = await fetch("data/verified-survey-summary.json?v=20261011-bazaar");
     if (!response.ok) throw new Error("Questionnaire summary unavailable");
     const data = await response.json();
     if (!data.groups?.every(group => group.items?.length)) throw new Error("Invalid questionnaire summary");
