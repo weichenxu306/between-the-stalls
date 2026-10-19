@@ -110,13 +110,16 @@
       const boundaries = [0.15, 0.34, 0.57, 0.80];
       const nextScene = boundaries.findIndex(boundary => progress < boundary);
       const active = nextScene < 0 ? scenes.length - 1 : nextScene;
+      const questionPhoto = range(progress, 0.10, 0.16);
       const consumerPhoto = range(progress, 0.30, 0.36);
       const merchantPhoto = range(progress, 0.53, 0.59);
       const frameworkPhoto = range(progress, 0.76, 0.83);
       const photoOpacity = [
-        1 - consumerPhoto + frameworkPhoto,
+        1 - questionPhoto,
+        questionPhoto * (1 - consumerPhoto),
         consumerPhoto * (1 - merchantPhoto),
-        merchantPhoto * (1 - frameworkPhoto)
+        merchantPhoto * (1 - frameworkPhoto),
+        frameworkPhoto
       ];
       const activePhoto = photoOpacity.indexOf(Math.max(...photoOpacity));
       photoOpacity.forEach((value, index) => story.style.setProperty(`--photo-${index}`, value.toFixed(5)));
